@@ -54,6 +54,12 @@
         >Draw Straight Line</span
       >
     </div>
+    <div class="buttons">
+      <!-- The drawing straight line button  -->
+      <span class="btn btn-info fa fa-paint-brush" id="drawing-quadratic-curve"
+        >Draw Quadratic Curve</span
+      >
+    </div>
     <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -79,6 +85,10 @@
       src="./javascript/drawing-straight-line.js"
       type="text/javascript"
     ></script>
+    <script
+      src="./javascript/drawing-quadratic-curve.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
       $(() => {
         currentFunction = new DrawingLine(contextReal);
@@ -93,6 +103,9 @@
         });
         $("#drawing-straight-line").click(() => {
           currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+        });
+        $("#drawing-quadratic-curve").click(() => {
+          currentFunction = new DrawingQuadraticCurve(contextReal, contextDraft);
         });
       });
     </script>
