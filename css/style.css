@@ -16,7 +16,7 @@
   background-color: transparent;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #canvas-container {
   height: 720px;
