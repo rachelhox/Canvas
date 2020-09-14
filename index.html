@@ -6,6 +6,10 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/a79000c96f.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,39 +18,66 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="container">
-    <h1>Canvas Application</h1>
-    <div id="canvas-container">
-      <canvas
-        id="canvas-real"
-        class="canvas"
-        width="1280px"
-        height="720px"
-      ></canvas>
-      <canvas
-        id="canvas-draft"
-        class="canvas"
-        width="1280px"
-        height="720px"
-      ></canvas>
-    </div>
-    <div class="buttons">
-      <!-- The drawing rectangle button  -->
-      <span class="btn btn-primary fa fa-square" id="drawing-rectangle"
-        >Draw Rectangle</span
-      >
-    </div>
-    <div class="buttons">
-      <!-- The drawing line button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
-        >Draw Line</span
-      >
-    </div>
-    <div class="buttons">
-      <!-- The drawing circlebutton  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-circle"
-        >Draw Circle</span
-      >
+  <body>
+    <div class="container">
+      <h1>Canvas Application</h1>
+      <div class="content">
+        <div id="canvas-container">
+          <canvas
+            id="canvas-real"
+            class="canvas"
+            width="800px"
+            height="600px"
+          ></canvas>
+          <canvas
+            id="canvas-draft"
+            class="canvas"
+            width="800px"
+            height="600px"
+          ></canvas>
+        </div>
+        <div class="buttons">
+          <!-- The drawing rectangle button  -->
+          <button class="btn btn-outline-info" id="drawing-rectangle">
+            <img src="assets/icons/frame.svg" />
+          </button>
+
+          <!-- The drawing triangle button  -->
+          <button class="btn btn-outline-info" id="drawing-triangle">
+            <img src="assets/icons/triangular.svg" />
+          </button>
+
+          <!-- The drawing polygon button  -->
+          <button class="btn btn-outline-info" id="drawing-polygon">
+            <img src="assets/icons/polygon.svg" />
+          </button>
+
+          <!-- The drawing straight-line button  -->
+          <button class="btn btn-outline-info" id="drawing-straight-line">
+            <img src="assets/icons/straight-line.svg" />
+          </button>
+
+          <!-- The drawing curve button  -->
+          <button class="btn btn-outline-info" id="drawing-curve">
+            <img src="assets/icons/curve.svg" />
+          </button>
+
+          <!-- The drawing line button  -->
+          <button class="btn btn-outline-info" id="drawing-line">
+            <img src="assets/icons/drawing-line.svg" />
+          </button>
+
+          <!-- The drawing circle button  -->
+          <button class="btn btn-outline-info" id="drawing-circle">
+            <img src="assets/icons/drawing-circle.svg" />
+          </button>
+
+          <!-- The drawing text button  -->
+          <button class="btn btn-outline-info" id="drawing-text">
+            <img src="assets/icons/text.svg" />
+          </button>
+        </div>
+      </div>
     </div>
     <!-- jQuery -->
     <script

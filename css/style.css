@@ -6,10 +6,24 @@
 .canvas {
   border: 1px black dotted;
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0rem;
+  bottom: 2rem;
+  left: 10rem;
+  right: 0rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
 #canvas-draft {
@@ -17,7 +31,14 @@
 }
 body {
   /* overflow: hidden; */
+  /* position: relative; */
+  display: flex;
 }
 #canvas-container {
-  height: 720px;
+  height: 700px;
+  position: relative;
+  /* top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 0rem; */
 }
