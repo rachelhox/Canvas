@@ -25,7 +25,7 @@ class DrawingQuadraticCurve extends PaintFunction {
     onMouseUp(coord, event) {
         if (this.click === 0) {
             this.contextDraft.moveTo(this.origX, this.origY);
-            this.contextDraft.lineTo(x, y);
+            this.contextDraft.lineTo(coord[0], coord[1]);
             this.contextDraft.stroke();
         }
     }
