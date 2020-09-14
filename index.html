@@ -104,6 +104,19 @@
     src="./javascript/drawing-polygon.js"
     type="text/javascript"
   ></script>
+    <!-- The drawing triangle functionality  -->
+    <script
+      src="./javascript/drawing-triangle.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./javascript/drawing-straight-line.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="./javascript/drawing-quadratic-curve.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
       $(() => {
         currentFunction = new DrawingLine(contextReal);
@@ -118,6 +131,18 @@
         });
         $("#drawing-polygon").click(() => {
           currentFunction = new DrawingPolygon(contextReal, contextDraft);
+        });
+        $("#drawing-triangle").click(() => {
+          currentFunction = new DrawingTriangle(contextReal, contextDraft);
+        });
+        $("#drawing-straight-line").click(() => {
+          currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+        });
+        $("#drawing-quadratic-curve").click(() => {
+          currentFunction = new DrawingQuadraticCurve(
+            contextReal,
+            contextDraft
+          );
         });
       });
     </script>
