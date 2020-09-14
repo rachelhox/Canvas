@@ -100,6 +100,11 @@
       src="./javascript/drawing-circle.js"
       type="text/javascript"
     ></script>
+    <!-- The drawing triangle functionality  -->
+    <script
+      src="./javascript/drawing-triangle.js"
+      type="text/javascript"
+    ></script>
     <script
       src="./javascript/drawing-straight-line.js"
       type="text/javascript"
@@ -120,11 +125,17 @@
         $("#drawing-circle").click(() => {
           currentFunction = new DrawingCircle(contextReal, contextDraft);
         });
+        $("#drawing-triangle").click(() => {
+          currentFunction = new DrawingTriangle(contextReal, contextDraft);
+        });
         $("#drawing-straight-line").click(() => {
           currentFunction = new DrawingStraightLine(contextReal, contextDraft);
         });
         $("#drawing-quadratic-curve").click(() => {
-          currentFunction = new DrawingQuadraticCurve(contextReal, contextDraft);
+          currentFunction = new DrawingQuadraticCurve(
+            contextReal,
+            contextDraft
+          );
         });
       });
     </script>
