@@ -43,9 +43,15 @@
       >
     </div>
     <div class="buttons">
-      <!-- The drawing circlebutton  -->
+      <!-- The drawing circle button  -->
       <span class="btn btn-info fa fa-paint-brush" id="drawing-circle"
         >Draw Circle</span
+      >
+    </div>
+    <div class="buttons">
+      <!-- The drawing straight line button  -->
+      <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line"
+        >Draw Straight Line</span
       >
     </div>
     <!-- jQuery -->
@@ -69,6 +75,10 @@
       src="./javascript/drawing-circle.js"
       type="text/javascript"
     ></script>
+    <script
+      src="./javascript/drawing-straight-line.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
       $(() => {
         currentFunction = new DrawingLine(contextReal);
@@ -80,6 +90,9 @@
         });
         $("#drawing-circle").click(() => {
           currentFunction = new DrawingCircle(contextReal, contextDraft);
+        });
+        $("#drawing-straight-line").click(() => {
+          currentFunction = new DrawingStraightLine(contextReal, contextDraft);
         });
       });
     </script>
