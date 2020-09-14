@@ -65,12 +65,10 @@
       type="text/javascript"
     ></script>
     <!-- The drawing circle functionality  -->
-    <!-- <script
+    <script
       src="./javascript/drawing-circle.js"
       type="text/javascript"
-      async
-      defer
-    ></script> -->
+    ></script>
     <script type="text/javascript">
       $(() => {
         currentFunction = new DrawingLine(contextReal);
@@ -80,9 +78,9 @@
         $("#drawing-line").click(() => {
           currentFunction = new DrawingLine(contextReal);
         });
-        // $("#drawing-circle").click(() => {
-        //   currentFunction = new DrawingCircle(contextReal);
-        // });
+        $("#drawing-circle").click(() => {
+          currentFunction = new DrawingCircle(contextReal, contextDraft);
+        });
       });
     </script>
   </body>
