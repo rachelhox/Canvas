@@ -12,15 +12,17 @@ class DrawingRectangle extends PaintFunction {
 
   // get the coordinates of the user's mouse
   onMouseDown(coord, event) {
-    this.contextReal.globalCompositeOperation = 'source-over';
-    this.contextReal.fillStyle = "none"; //after releasing the mouse
+    this.contextReal.globalCompositeOperation = "source-over";
+    this.contextReal.fillStyle = curFillColor; //after releasing the mouse
+    // this.contextReal.strokeStyle = curStroke; curStroke doesn't work yet T_T
     this.origX = coord[0];
     this.origY = coord[1];
   }
 
   // the actual drawing on the canvas
   onDragging(coord, event) {
-    this.contextDraft.fillStyle = "#f44";
+    this.contextDraft.fillStyle = curFillColor;
+    // this.contextDraft.strokeStyle = curStroke; curStroke doesn't work yet T_T
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.fillRect(
       this.origX,
