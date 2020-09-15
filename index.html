@@ -85,7 +85,11 @@
           </button>
           <!-- Color picker button -->
           <button id="my_picker">
-            <!-- <img src="assets/icons/color-wheel.svg" /> -->
+            <span class="tooltiptext" id="tooltip1">Stroke Color</span>
+          </button>
+          <!-- Color picker button for fill color-->
+          <button id="my_fill_color_picker">
+            <span class="tooltiptext" id="tooltip2">Fill Color</span>
           </button>
         </div>
       </div>
@@ -151,12 +155,32 @@
     <!-- Color picker functionality -->
     <script type="text/javascript">
       const button = document.getElementById("my_picker");
+      const fillButton = document.getElementById("my_fill_color_picker");
       let picker = new ColorPicker(button, curStroke);
+      let fillPicker = new ColorPicker(fillButton, curFillColor);
       button.addEventListener("colorChange", function (event) {
         // This will give you the color you selected
         const color = event.detail.color.rgba;
         // Code to do what you want with that color...
         curStroke = color;
+      });
+      button.addEventListener("mouseover", (event) => {
+        document.getElementById("tooltip1").style.visibility = "visible";
+      });
+      button.addEventListener("mouseleave", (event) => {
+        document.getElementById("tooltip1").style.visibility = "hidden";
+      });
+      fillButton.addEventListener("mouseover", (event) => {
+        document.getElementById("tooltip2").style.visibility = "visible";
+      });
+      fillButton.addEventListener("mouseleave", (event) => {
+        document.getElementById("tooltip2").style.visibility = "hidden";
+      });
+      fillButton.addEventListener("colorChange", function (event) {
+        // This will give you the color you selected
+        const fillColor = event.detail.color.rgba;
+        // Code to do what you want with that color...
+        curFillColor = fillColor;
       });
     </script>
     <script type="text/javascript">

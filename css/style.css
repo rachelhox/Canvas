@@ -70,16 +70,14 @@ body {
   position: relative;
   display: flex;
 }
-#canvas-container {
-  /* height: 700px; */
-  /* position: relative; */
-  /* top: 2rem;
-  bottom: 2rem;
-  left: 2rem;
-  right: 0rem; */
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  line-height: 2.3;
+  border-radius: 0.2rem;
 }
 
-#my_picker {
+/* #my_picker {
   margin: 50px 0;
   width: 50px;
   height: 50px;
@@ -87,4 +85,80 @@ body {
   border: transparent;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#my_fill_color_picker {
+  margin: 50px 0;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+} */
+
+#my_fill_color_picker {
+  /* margin: 50px 0; */
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 0.3rem;
+  background: #fff;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#my_picker {
+  /* margin: 50px 0; */
+  position: absolute;
+  bottom: 2.1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 1rem;
+  background: #fff;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons:last-child {
+  padding-bottom: 4.5rem;
+}
+
+#my_fill_color_picker > #tooltip2 {
+  visibility: hidden;
+  /* display: none; */
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 3.6rem;
+}
+
+#my_picker > #tooltip1 {
+  visibility: hidden;
+  /* display: none; */
+  width: 120px;
+  background-color: rgba(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 3rem;
 }
