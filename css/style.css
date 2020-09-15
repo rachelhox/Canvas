@@ -1,4 +1,54 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+.canvas {
+  border: 1px black dotted;
+  position: absolute;
+  top: 0rem;
+  bottom: 2rem;
+  left: 10rem;
+  right: 0rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+#canvas-draft {
+  background-color: transparent;
+}
+body {
+  /* overflow: hidden; */
+  /* position: relative; */
+  display: flex;
+}
+#canvas-container {
+  height: 700px;
+  position: relative;
+  /* top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 0rem; */
+}
+
+#my_picker {
+  margin: 50px 0;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
 }
