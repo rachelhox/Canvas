@@ -30,9 +30,10 @@ class DrawingQuadraticCurve extends PaintFunction {
             this.contextDraft.quadraticCurveTo(coord[0], coord[1], this.endX, this.endY);
             this.contextDraft.stroke();
             // circle for use to drag to control point
+            this.contextDraft.fillStyle = 'red';
             this.contextDraft.beginPath();
             this.contextDraft.arc(coord[0], coord[1], 8, 0, 2 * Math.PI);
-            this.contextDraft.stroke();
+            this.contextDraft.fill();
         }
     }
     onMouseMove(coord, event) {}
@@ -47,9 +48,10 @@ class DrawingQuadraticCurve extends PaintFunction {
             this.contextDraft.lineTo(this.endX, this.endY);
             this.contextDraft.stroke();
             // circle for use to drag to control point
+            this.contextDraft.fillStyle = 'red';
             this.contextDraft.beginPath();
             this.contextDraft.arc(coord[0], coord[1], 8, 0, 2 * Math.PI);
-            this.contextDraft.stroke();
+            this.contextDraft.fill();
             // 4. initiate second dragging to find the control point
             this.variable = true;
         } else if (this.variable === true) {
