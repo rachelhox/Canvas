@@ -26,7 +26,7 @@ class DrawingPolygon extends PaintFunction {
             this.angle = (2 * Math.PI) / this.sides;
 
             this.contextDraft.beginPath();
-            this.contextDraft.strokeStyle = "red";
+            this.contextDraft.strokeStyle = curStroke;
             this.contextDraft.lineWidth = 5;
             this.contextDraft.lineJoin = "round";
 
@@ -62,7 +62,7 @@ class DrawingPolygon extends PaintFunction {
             this.angle = (2 * Math.PI) / this.sides;
 
             this.contextDraft.beginPath();
-            this.contextDraft.strokeStyle = "red";
+            this.contextDraft.strokeStyle = curStroke;
             this.contextDraft.lineWidth = 5;
             this.contextDraft.lineJoin = "round";
 
@@ -90,7 +90,7 @@ class DrawingPolygon extends PaintFunction {
     onMouseUp(coord){
         if (this.variable === false) {
             this.contextDraft.beginPath();
-            this.contextDraft.strokeStyle = "red";
+            this.contextDraft.strokeStyle = curStroke;
             this.contextDraft.lineWidth = 5;
             this.contextDraft.lineJoin = "round";
             // transparent so that curve won't join, circle and triangle won't have outline
@@ -108,7 +108,7 @@ class DrawingPolygon extends PaintFunction {
                 var currentPointY = this.origY - this.radius * Math.sin(currentAngle);
                 //draw the line
                 
-                this.contextDraft.strokeStyle = 'red';
+                this.contextDraft.strokeStyle = curStroke;
                 this.contextDraft.lineTo(currentPointX, currentPointY);
                 
             }
@@ -118,7 +118,7 @@ class DrawingPolygon extends PaintFunction {
             this.variable = true;
         } else if (this.variable) {
             this.contextReal.beginPath();
-            this.contextReal.strokeStyle = "red";
+            this.contextReal.strokeStyle = curStroke;
             this.contextReal.lineWidth = 5;
             this.contextReal.lineJoin = "round";
 
@@ -134,7 +134,7 @@ class DrawingPolygon extends PaintFunction {
                 var currentPointY = this.origY - this.radius * Math.sin(currentAngle);
                 //draw the line
                 
-                this.contextReal.strokeStyle = 'red';
+                this.contextReal.strokeStyle = curStroke;
                 this.contextReal.lineTo(currentPointX, currentPointY);
                 
             }
