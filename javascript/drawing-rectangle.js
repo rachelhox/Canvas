@@ -12,6 +12,7 @@ class DrawingRectangle extends PaintFunction {
 
   // get the coordinates of the user's mouse
   onMouseDown(coord, event) {
+    this.contextReal.globalCompositeOperation = 'source-over';
     this.contextReal.fillStyle = "none"; //after releasing the mouse
     this.origX = coord[0];
     this.origY = coord[1];

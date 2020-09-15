@@ -143,7 +143,18 @@ class DrawingPolygon extends PaintFunction {
         }
         
 
+    for (let i = 1; i <= this.sides; i++) {
+      //current points
+      var currentAngle = this.startAngle + i * this.angle;
+      var currentPointX = this.origX + this.radius * Math.cos(currentAngle);
+      var currentPointY = this.origY - this.radius * Math.sin(currentAngle);
+      //draw the line
+      this.contextReal.lineTo(currentPointX, currentPointY);
     }
-    onMouseLeave(){}
-    onMouseEnter(){}
+
+    this.contextReal.closePath();
+    this.contextReal.stroke();
+  }
+  onMouseLeave() {}
+  onMouseEnter() {}
 }
