@@ -14,7 +14,7 @@
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .buttons {
@@ -35,7 +35,7 @@ body {
   display: flex;
 }
 #canvas-container {
-  /* height: 800px; */
+  height: 700px;
   position: relative;
   /* top: 2rem;
   bottom: 2rem;
