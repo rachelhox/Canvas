@@ -16,22 +16,22 @@ class DrawingText extends PaintFunction {
             let mouseX = this.origX;
             let mouseY = this.origY;
 
-            this.contextReal.fillStyle = "steelblue";
+            this.contextReal.fillStyle = curStroke;
             var input = document.createElement('input');
             input.type = 'text';
             input.style.position = 'fixed';
             input.style.border = "none";
             input.style.outline = "none"; 
             input.style.backgroundColor = "transparent";
-            input.style.height = "30px";
-            input.style.width = "300px";
+            input.style.height = "40px";
+            input.style.width = "350px";
             input.placeholder = "Type & hit 'Enter'. 'Esc' to delete";
             input.style.font = "Arial"; // font-family for placeholder
             input.autocomplete = "off";
 
 
-            input.style.left = (this.origX + 370) + 'px'; //the position of input when you click mouse
-            input.style.top = (this.origY + 30) + 'px';
+            input.style.left = (this.origX + 300) + 'px'; //the position of input when you click mouse
+            input.style.top = (this.origY + 0) + 'px';
             input.id = 'textBox'
             document.body.appendChild(input);
             hasInput = true;
@@ -52,7 +52,7 @@ class DrawingText extends PaintFunction {
             function drawText(txt, coord) {
                 contextReal.textBaseline = 'top';
                 contextReal.textAlign = 'left';
-                contextReal.font = "italic 300 2rem times"
+                contextReal.font = "italic 300 2rem times";
                 contextReal.fillText(txt, mouseX, mouseY);
             }
 

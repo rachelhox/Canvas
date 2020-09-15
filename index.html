@@ -7,7 +7,8 @@
   <title></title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://kit.fontawesome.com/a79000c96f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@r-tek/colr_pickr@1.2.0/build/colr_pickr.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
@@ -42,8 +43,8 @@
           <img src="assets/icons/straight-line.svg" />
         </button>
 
-        <!-- The drawing curve button  -->
-        <button class="btn btn-outline-info" id="drawing-curve">
+        <!-- The drawing quadratic curve button  -->
+        <button class="btn btn-outline-info" id="drawing-quadratic-curve">
           <img src="assets/icons/curve.svg" />
         </button>
 
@@ -61,9 +62,15 @@
         <button class="btn btn-outline-info" id="drawing-text">
           <img src="assets/icons/text.svg" />
         </button>
+
         <!-- The select tool button  -->
         <button class="btn btn-outline-info" id="select-tool">
           <img src="assets/icons/frame.svg" />
+        </button>
+
+        <!-- Color picker button -->
+        <button id="my_picker">
+          <!-- <img src="assets/icons/color-wheel.svg" /> -->
         </button>
       </div>
     </div>
@@ -71,6 +78,14 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+
+  <!-- Color Picker Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/colr_pickr@1.2.0/build/colr_pickr.min.js">
+  </script>
+
+  <!-- declaring variables -->
+  <script type="text/javascript" src="javascript/variables.js"></script>
+
   <!-- The drawing functionality  -->
   <script src="./javascript/canvas-common.js" type="text/javascript"></script>
 
@@ -78,16 +93,33 @@
   <script src="./javascript/drawing-line.js" type="text/javascript"></script>
   <!-- The drawing rectangle functionality  -->
   <script src="./javascript/drawing-rectangle.js" type="text/javascript"></script>
-  <!-- The drawing circle functionality  -->
-  <script src="./javascript/drawing-circle.js" type="text/javascript"></script>
+
   <!-- The drawing text functionality -->
   <script src="./javascript/drawing-text.js" type="text/javascript"></script>
+  <!-- The drawing circle functionality  -->
+  <script src="./javascript/drawing-circle.js" type="text/javascript"></script>
+  <!-- The drawing polygon functionality  -->
   <script src="./javascript/drawing-polygon.js" type="text/javascript"></script>
   <!-- The drawing triangle functionality  -->
   <script src="./javascript/drawing-triangle.js" type="text/javascript"></script>
+  <!-- The drawing straight line functionality  -->
   <script src="./javascript/drawing-straight-line.js" type="text/javascript"></script>
+  <!-- The drawing quadratic curve functionality  -->
   <script src="./javascript/drawing-quadratic-curve.js" type="text/javascript"></script>
+  <!-- The select tool functionality  -->
   <script src="./javascript/select-tool.js" type="text/javascript"></script>
+  <!-- Color picker functionality -->
+  <script type="text/javascript">
+    const button = document.getElementById("my_picker");
+    let picker = new ColorPicker(button, curStroke);
+    button.addEventListener("colorChange", function (event) {
+      // This will give you the color you selected
+      const color = event.detail.color.rgba;
+
+      // Code to do what you want with that color...
+      curStroke = color;
+    });
+  </script>
   <script type="text/javascript">
     $(() => {
       currentFunction = new DrawingLine(contextReal);
@@ -112,14 +144,14 @@
       $("#drawing-straight-line").click(() => {
         currentFunction = new DrawingStraightLine(contextReal, contextDraft);
       });
-      $("#select-tool").click(() => {
-        currentFunction = new SelectTool(contextReal, contextDraft);
-      });
       $("#drawing-quadratic-curve").click(() => {
         currentFunction = new DrawingQuadraticCurve(
           contextReal,
           contextDraft
         );
+      });
+      $("#select-tool").click(() => {
+        currentFunction = new SelectTool(contextReal, contextDraft);
       });
     });
   </script>

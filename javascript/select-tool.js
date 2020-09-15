@@ -9,19 +9,19 @@ class SelectTool extends PaintFunction{
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;   
-        this.objX;
-        this.objY;
+        // this.objX;
+        // this.objY;
         // this.objDraft = null;
         // this.obj = null;
         this.selectionMade = false;
-        this.originalMove = false;
+        // this.originalMove = false;
     };
 
     onMouseDown(coord,event){
 
-        if (this.selectionMade == false) { 
+        if (this.selectionMade === false) { 
 
-            this.contextReal.setLineDash([selectorDashLength]);
+            // this.contextReal.setLineDash([selectorDashLength]);
             this.contextDraft.setLineDash([selectorDashLength]);
             this.contextReal.lineWidth = this.contextDraft.lineWidth = selectorLineWidth;
             this.origX = coord[0];
@@ -33,8 +33,7 @@ class SelectTool extends PaintFunction{
 
             if ((coord[0] > this.origX) && (coord[0] < this.objX) && (coord[1] > this.origY) && (coord[1] < this.objY)) {
 
-                if (this.originalMove == true) {
-                    // this.contextReal.clearRect(this.origX, this.origY, this.obj.width, this.obj.height);
+                if (this.originalMove === true) {
 
                     this.contextReal.fillStyle = '#fff';
                     this.contextReal.fillRect(this.origX,this.origY,this.obj.width, this.obj.height);
@@ -48,8 +47,8 @@ class SelectTool extends PaintFunction{
                 this.origX = coord[0];
                 this.origY = coord[1];
                 this.selectionMade = false;
-                this.objDraft = null;
-                this.obj = null;
+                // this.objDraft = null;
+                // this.obj = null;
                 this.originalMove = false;
             }
         }   
@@ -95,7 +94,7 @@ class SelectTool extends PaintFunction{
 
         }   else  { 
 
-            this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+            // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
             this.putImage([this.objDraft, coord[0] - this.objDraft.width/2, coord[1] - this.objDraft.height/2], [this.obj, coord[0] - this.obj.width/2, coord[1] - this.obj.height/2])
             this.origX = coord[0] - this.obj.width/2 ;
             this.origY = coord[1] - this.obj.height/2;
@@ -121,7 +120,7 @@ class SelectTool extends PaintFunction{
     };
     onMouseLeave(){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextReal.putImageData(this.obj, this.origX, this.origY);
+        // this.contextReal.putImageData(this.obj, this.origX, this.origY);
         this.selectionMade = false;
         this.objDraft = null;
         this.obj = null;
@@ -178,15 +177,15 @@ class SelectTool extends PaintFunction{
         };
     }
 
-    resetVariables () {
-        this.selectionMade = false;
-        this.obj = null;
-        this.objDraft = null;
-        this.objX = null;
-        this.objY = null;
-        this.origX = null;
-        this.origY = null;
-        this.originalMove = false;
-    }
+    // resetVariables () {
+    //     this.selectionMade = false;
+    //     this.obj = null;
+    //     this.objDraft = null;
+    //     this.objX = null;
+    //     this.objY = null;
+    //     this.origX = null;
+    //     this.origY = null;
+    //     this.originalMove = false;
+    // }
 
 }
