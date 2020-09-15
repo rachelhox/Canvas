@@ -3,10 +3,11 @@ class DrawingCircle extends PaintFunction {
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
+        this.contextReal.globalCompositeOperation = 'source-over';
     }
 
     onMouseDown(coord, e) {
-        this.contextReal.globalCompositeOperation = 'source-over';
+        
         this.contextReal.fillStyle = "#f44";
         this.origX = coord[0];
         this.origY = coord[1];

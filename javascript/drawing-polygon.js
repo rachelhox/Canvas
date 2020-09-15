@@ -4,7 +4,7 @@ class DrawingPolygon extends PaintFunction {
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
         this.variable = false;
-        // false -> first click; true -> move
+        
     }
 
     onMouseDown(coord, event) {
@@ -93,6 +93,8 @@ class DrawingPolygon extends PaintFunction {
             this.contextDraft.strokeStyle = "red";
             this.contextDraft.lineWidth = 5;
             this.contextDraft.lineJoin = "round";
+            // transparent so that curve won't join, circle and triangle won't have outline
+            this.contextReal.strokeStyle = "transparent";
 
             this.beginX = this.origX + this.radius *Math.cos(this.startAngle);
             this.beginY = this.origY - this.radius *Math.sin(this.startAngle);
@@ -136,9 +138,10 @@ class DrawingPolygon extends PaintFunction {
                 this.contextReal.lineTo(currentPointX, currentPointY);
                 
             }
-
+            this.contextReal.globalCompositeOperation = 'source-over';
             this.contextReal.closePath();
             this.contextReal.stroke();
+            
             this.variable = false;
         }
 
