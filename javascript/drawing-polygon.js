@@ -1,15 +1,17 @@
 class DrawingPolygon extends PaintFunction {
-  constructor(contextReal, contextDraft) {
-    super();
-    this.contextReal = contextReal;
-    this.contextDraft = contextDraft;
-  }
+    constructor(contextReal, contextDraft) {
+        super();
+        this.contextReal = contextReal;
+        this.contextDraft = contextDraft;
+    }
 
-  onMouseDown(coord, event) {
-    this.contextReal.fillStyle = "#f44";
-    this.origX = coord[0];
-    this.origY = coord[1];
-  }
+    onMouseDown(coord, event) {
+        this.contextReal.globalCompositeOperation = 'source-over';
+        this.contextReal.fillStyle = "#f44";
+        this.origX = coord[0];
+        this.origY = coord[1];
+    }
+
   onDragging(coord, e) {
     this.sides = 10;
     this.radius = 0;
@@ -42,7 +44,7 @@ class DrawingPolygon extends PaintFunction {
 
     this.contextDraft.closePath();
     this.contextDraft.stroke();
-  }
+    }
   onMouseMove() {}
 
   onMouseUp(coord) {
