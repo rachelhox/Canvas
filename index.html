@@ -94,6 +94,14 @@
         <button class="btn btn-outline-info" id="stamp-rectangle">
           <img src="assets/icons/stamp.svg" />
         </button>
+        <!-- The move and scale button  -->
+        <button class="btn btn-outline-info" id="move-and-scale">
+          <img src="assets/icons/move-and-scale.svg" />
+        </button>
+        <!-- The scale button  -->
+        <button class="btn btn-outline-info" id="scale">
+          <img src="assets/icons/noun_square.svg" />
+        </button>
         <!-- The save button  -->
         <button class="btn btn-outline-info" id="save">
           <img src="assets/icons/save.svg" />
@@ -232,10 +240,7 @@
           );
         });
         $("#drawing-bezier-curve").click(() => {
-          currentFunction = new DrawingBezierCurve(
-            contextReal,
-            contextDraft
-          );
+          currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
         });
       });
     </script>
