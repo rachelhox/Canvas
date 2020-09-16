@@ -170,19 +170,20 @@ body {
 /* fabricJS z-index dllm */
 
 .lower-canvas {
-  z-index: 10000000;
+  z-index: 0;
 }
 
 .upper-canvas {
-  z-index: 10000000;
+  z-index: 0;
   background-color: transparent;
 }
 
 /* our own draft canvas z-index dllm */
 
 #canvas-draft {
-  z-index: 10000000;
+  z-index: 0;
   background-color: transparent;
+  top: 9rem;
 }
 
 /* external library olor pickr z-index dllm */
@@ -197,4 +198,8 @@ body {
 
 .container {
   z-index: 10000000;
+}
+
+.upper-layer {
+  z-index: 100000000;
 }

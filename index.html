@@ -62,7 +62,7 @@
             <img src="assets/icons/curve.svg" />
           </button>
           <!-- The drawing line button  -->
-          <button class="btn btn-outline-info" id="drawing-line">
+          <button class="btn btn-outline-info" id="testing-2">
             <img src="assets/icons/drawing-line.svg" />
           </button>
           <!-- The eraser button  -->
@@ -97,9 +97,13 @@
           <img src="assets/icons/save.svg" />
         </button>
         <!-- The clear button  -->
-        <!-- <button class="btn btn-outline-info" id="clear">
+        <button class="btn btn-outline-info" id="clear">
           <img src="assets/icons/clear.svg" />
-        </button> -->
+        </button>
+        <!-- The clear button  -->
+        <button class="btn btn-outline-info" id="testing">
+          <img src="assets/icons/clear.svg" />
+        </button>
       </div>
     </div>
     <!-- jQuery -->
@@ -225,6 +229,22 @@
             contextReal,
             contextDraft
           );
+        });
+        let click = 0;
+        $("#testing").click(() => {
+          if (true) {
+            $('.upper-canvas').css('z-index', '2');
+            click ++;
+          } else if (click === 1) {
+            $('.upper-canvas').css('z-index', '3');
+            click = 0;
+          }
+          
+        });
+        $("#testing-2").click(() => {
+          $('.upper-canvas').css('z-index', '-1');
+          $('#canvas-real').css('z-index', '1');
+          $('#canvas-draft').css('z-index', '1');
         });
       });
     </script>

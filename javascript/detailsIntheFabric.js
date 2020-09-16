@@ -8,11 +8,11 @@ function AddRect() {
   var rect = new fabric.Rect({
     left: 100,
     top: 50,
-    fill: "blue",
+    fill: curFillColor,
     width: 200,
     height: 100,
     objectCaching: false,
-    stroke: "yellow",
+    stroke: curStroke,
     strokeWidth: 4,
   });
   canvas.add(rect);
@@ -57,7 +57,7 @@ c0,7.66,2.98,14.87,8.4,20.29l0,0c5.42,5.42,12.62,8.4,20.28,8.4c7.66,0,14.87\
 -20.28l0-76.74c0-7.66-2.98-14.87-8.4-20.29C136.19,2.98,128.98,0,121.32,0z"
 );
 
-canvas.add(path.set({ left: 100, top: 200 }));
+// canvas.add(path.set({ left: 100, top: 200 }));
 
 $("#AddRect").click(function () {
   AddRect();
