@@ -59,6 +59,10 @@
           <button class="btn btn-outline-info" id="drawing-quadratic-curve">
             <img src="assets/icons/curve.svg" />
           </button>
+          <!-- The drawing bezier curve button  -->
+          <button class="btn btn-outline-info" id="drawing-bezier-curve">
+            <img src="assets/icons/bezier.svg" />
+          </button>
           <!-- The drawing line button  -->
           <button class="btn btn-outline-info" id="drawing-line">
             <img src="assets/icons/drawing-line.svg" />
@@ -148,6 +152,11 @@
       src="./javascript/drawing-quadratic-curve.js"
       type="text/javascript"
     ></script>
+    <!-- The drawing bezier curve functionality  -->
+    <script
+      src="./javascript/drawing-bezier-curve.js"
+      type="text/javascript"
+    ></script>
     <!-- The save functionality  -->
     <script src="./javascript/save.js" type="text/javascript"></script>
     <!-- The clear functionality  -->
@@ -212,6 +221,12 @@
         });
         $("#drawing-quadratic-curve").click(() => {
           currentFunction = new DrawingQuadraticCurve(
+            contextReal,
+            contextDraft
+          );
+        });
+        $("#drawing-bezier-curve").click(() => {
+          currentFunction = new DrawingBezierCurve(
             contextReal,
             contextDraft
           );
