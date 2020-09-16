@@ -8,7 +8,8 @@ body {
 }
 
 .canvas {
-  border: 1px rgba(0, 0, 0) dotted;
+  border: 1px rgba(0, 0, 0) solid;
+  box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 5rem;
   bottom: 5rem;
@@ -18,7 +19,7 @@ body {
   background-color: rgba(255, 255, 255);
 }
 
-.content {
+.flexRow {
   display: flex;
   flex-direction: row;
 }
@@ -72,33 +73,33 @@ body {
 }
 
 .btn {
-  padding: 0.5rem 1.2rem;
+  padding: 0rem 0.5rem;
   line-height: 2.3;
   border-radius: 0.2rem;
 }
 
 #my_fill_color_picker {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   bottom: 1.2rem;
-  left: 0.3rem;
+  left: 0.1rem;
   background: #fff;
   border: transparent;
-  border-radius: 5px;
+  border-radius: 0px;
   cursor: pointer;
   z-index: 1;
 }
 
 #my_picker {
   position: absolute;
-  bottom: 2.1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  left: 1rem;
+  bottom: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 0.7rem;
   background: #fff;
   border: transparent;
-  border-radius: 5px;
+  border-radius: 0px;
   cursor: pointer;
 }
 
@@ -120,7 +121,7 @@ body {
   position: absolute;
   z-index: 1;
   top: 0px;
-  left: 3.6rem;
+  left: 2.3rem;
 }
 
 #my_picker > #tooltip1 {
@@ -137,5 +138,15 @@ body {
   position: absolute;
   z-index: 1;
   top: 0px;
-  left: 3rem;
+  left: 1.8rem;
+}
+
+.top-menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  left: 2.5rem;
+  top: 0rem;
+  background-color: rgb(61, 59, 59);
 }
