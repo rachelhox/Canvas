@@ -105,10 +105,11 @@ class DrawingPolygon extends PaintFunction {
       this.contextDraft.lineWidth = 5;
       this.contextDraft.lineJoin = "round";
       // for fill
-      this.contextDraft.fillStyle = curFillColor;
+      // this.contextDraft.fillStyle = curFillColor;
 
-      // transparent so that curve won't join, circle and triangle won't have outline
+      // transparent so that curve won't join, circle and triangle won't have outline and fill
       this.contextReal.strokeStyle = "transparent";
+      this.contextReal.fillStyle = "transparent";
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
@@ -142,7 +143,7 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.lineJoin = "round";
       // for fill
       this.contextDraft.fillStyle = curFillColor;
-
+      
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
@@ -161,6 +162,7 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.globalCompositeOperation = "source-over";
       this.contextReal.closePath();
       this.contextReal.stroke();
+      this.contextReal.fillStyle = curFillColor;
 
       this.variable = false;
     }

@@ -113,14 +113,6 @@
         <button class="btn btn-outline-info" id="clear">
           <img src="assets/icons/clear.svg" />
         </button>
-        <!-- The enabling fabric.js scaling button  -->
-        <button class="btn btn-outline-info" id="fabric-scaling">
-          <img src="assets/icons/clear.svg" />
-        </button>
-        <!-- The enabling drawing after fabric.js scaling button  -->
-        <button class="btn btn-outline-info" id="fabric-drawing">
-          <img src="assets/icons/clear.svg" />
-        </button>
       </div>
     </div>
     <!-- jQuery -->
@@ -247,9 +239,23 @@
             contextDraft
           );
         });
+
+        // to enable drawing after stamp is initiated
+        let ourDrawFunction = $('.side-car').children().length;
+        for (let i = 0; i < ourDrawFunction - 2; i++) {
+          $('.side-car').children().eq(i).click(() => {
+            $('.upper-canvas').css('z-index', '0');
+            $('#canvas-real').css('z-index', '1');
+            $('#canvas-draft').css('z-index', '3');
+          })
+        };
+
         let click = 0;
-        $("#AddRect").click(() => {
-          if (click === 0) {
+        let fabricFunction = $('.top-menu').children().length;
+        console.log(fabricFunction);
+        for (let i = 0; i < fabricFunction; i++) {
+          $('.top-menu').children().eq(i).click(() => {
+            if (click === 0) {
             $('.upper-canvas').css('z-index', '2');
             click = 1;
           } else if (click === 1) {
@@ -257,13 +263,8 @@
             $('#canvas-draft').css('z-index', '2');
             click = 0;
           }
-          
-        });
-        $("#drawing-line").click(() => {
-          $('.upper-canvas').css('z-index', '0');
-          $('#canvas-real').css('z-index', '1');
-          $('#canvas-draft').css('z-index', '3');
-        });
+          })
+        }
       });
     </script>
   </body>

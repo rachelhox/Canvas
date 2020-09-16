@@ -1,8 +1,7 @@
 // var canvas = new fabric.Canvas("canvas-real");
 canvas = new fabric.Canvas("canvas-real");
-
-contextFabric = canvas.getContext("2d");
-console.log(contextFabric);
+// contextFabric = canvas.getContext("2d");
+// console.log(contextFabric);
 
 function AddRect() {
   var rect = new fabric.Rect({
