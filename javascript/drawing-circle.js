@@ -24,7 +24,6 @@ class DrawingCircle extends PaintFunction {
         this.contextDraft.beginPath();
         this.contextDraft.arc(this.origX, this.origY, radius, 0, Math.PI*2);
         this.contextDraft.fill();
-
     }
 
     onMouseMove(){}
