@@ -13,15 +13,15 @@ class DrawingTriangle extends PaintFunction {
 
   // get the coordinates of the user's mouse
   onMouseDown(coord, event) {
-    this.contextReal.globalCompositeOperation = 'source-over';
-    this.contextReal.fillStyle = "black"; //after releasing the mouse
+    this.contextReal.globalCompositeOperation = "source-over";
+    this.contextReal.fillStyle = curFillColor; //after releasing the mouse
     this.origX = coord[0];
     this.origY = coord[1];
   }
 
   // the actual drawing on the canvas
   onDragging(coord, event) {
-    this.contextDraft.fillStyle = "black";
+    this.contextDraft.fillStyle = curFillColor;
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.beginPath();
     this.contextDraft.moveTo(this.origX, this.origY);
@@ -34,9 +34,9 @@ class DrawingTriangle extends PaintFunction {
 
   // clear the canvas and move the drawing to the real canvas
   onMouseUp(coord) {
-    this.contextReal.fillStyle = "black";
+    this.contextReal.fillStyle = curFillColor;
     this.contextReal.shadowBlur = 0;
-    this.contextReal.shadowColor = "black";
+    this.contextReal.shadowColor = curFillColor;
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextReal.beginPath();
     this.contextReal.moveTo(this.origX, this.origY);
