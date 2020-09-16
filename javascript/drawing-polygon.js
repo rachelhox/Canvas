@@ -142,7 +142,7 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.lineWidth = 5;
       this.contextReal.lineJoin = "round";
       // for fill
-      this.contextDraft.fillStyle = curFillColor;
+      this.contextReal.fillStyle = curFillColor;
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
