@@ -27,7 +27,7 @@ class DrawingText extends PaintFunction {
             input.style.font = "Arial"; // font-family for placeholder
 
             input.style.left = (mouseX + 300) + 'px'; //the position of input when you click mouse//
-            input.style.top = (mouseY + 35) + 'px';
+            input.style.top = (mouseY + 90) + 'px';
             document.body.appendChild(input);
             hasInput = true;
 
@@ -40,7 +40,6 @@ class DrawingText extends PaintFunction {
                 if (input.key === 'Escape') {
                     document.body.removeChild(this);
                     hasInput = false;
-                    // beforeDraw();
                 }
 
             };
@@ -49,8 +48,7 @@ class DrawingText extends PaintFunction {
                 contextReal.textBaseline = 'middle';
                 contextReal.textAlign = 'left';
                 contextReal.font = "italic 300 3rem times"
-                contextReal.fillText(txt, mouseX, mouseY);
-                
+                contextReal.fillText(txt, mouseX, mouseY);    
             }
 
         }

@@ -1,6 +1,6 @@
 
 selectorDashLength = 6;
-selectorLineColor = "black";
+selectorLineColor = curStroke;
 selectorLineWidth = 1;
 minSizeNecessary = 3
 
@@ -83,7 +83,7 @@ class Selection extends PaintFunction{
                 this.getDraftImage(coord);
                 this.obj = this.contextReal.getImageData(this.origX, this.origY, coord[0]- this.origX, coord[1] - this.origY); 
                 
-                // console.log(this.origX, this.origY)
+                console.log(this.origX, this.origY)
 
                 this.selectionMade = true;
                 this.originalMove = true;
@@ -95,7 +95,7 @@ class Selection extends PaintFunction{
         }   else  { 
 
             // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-            this.putImage([this.objDraft, coord[0] - this.objDraft.width/2, coord[1] - this.objDraft.height/2], [this.obj, coord[0] - this.obj.width/2, coord[1] - this.obj.height/2]);
+            this.putImage([this.objDraft, coord[0] - this.objDraft.width/2, coord[1] - this.objDraft.height/2], [this.obj, coord[0] - this.obj.width/2, coord[1] - this.obj.height/2])
             this.origX = coord[0] - this.obj.width/2 ;
             this.origY = coord[1] - this.obj.height/2;
             this.objX = coord[0] + this.obj.width/2;
@@ -118,16 +118,14 @@ class Selection extends PaintFunction{
         this.contextDraft.putImageData(obj1[0], obj1[1], obj1[2]);
         this.contextDraft.putImageData(obj2[0], obj2[1], obj2[2]);
     };
-
     onMouseLeave(){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.rotate(45 * Math.PI / 180)
-        this.contextReal.putImageData(this.obj, this.origX, this.origY);
+        // this.contextReal.putImageData(this.obj, this.origX, this.origY);
         this.selectionMade = false;
-        // this.objDraft = null;
-        // this.obj = null;
-        // this.origX = null;
-        // this.origY = null;
+        this.objDraft = null;
+        this.obj = null;
+        this.origX = null;
+        this.origY = null;
         this.originalMove = false;
     }
     onMouseEnter(){}
