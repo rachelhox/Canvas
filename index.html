@@ -23,19 +23,19 @@
   </head>
   <body>
     <div class="big-container">
-      <div class="content">
+      <div class="flexRow">
         <div class="container" id="canvas-container">
           <canvas
             id="canvas-real"
             class="canvas"
-            width="1200rem"
-            height="800rem"
+            width="700rem"
+            height="500rem"
           ></canvas>
           <canvas
             id="canvas-draft"
             class="canvas"
-            width="1200rem"
-            height="800rem"
+            width="700rem"
+            height="500rem"
           ></canvas>
         </div>
         <div class="buttons side-car">
@@ -75,14 +75,6 @@
           <button class="btn btn-outline-info" id="drawing-text">
             <img src="assets/icons/text.svg" />
           </button>
-          <!-- The save button  -->
-          <button class="btn btn-outline-info" id="save">
-            <img src="assets/icons/save.svg" />
-          </button>
-          <!-- The clear button  -->
-          <button class="btn btn-outline-info" id="clear">
-            <img src="assets/icons/clear.svg" />
-          </button>
           <!-- Color picker button -->
           <button id="my_picker">
             <span class="tooltiptext" id="tooltip1">Stroke Color</span>
@@ -92,6 +84,20 @@
             <span class="tooltiptext" id="tooltip2">Fill Color</span>
           </button>
         </div>
+      </div>
+      <div class="top-menu">
+        <!-- The stamp button  -->
+        <button class="btn btn-outline-info" id="stamp-rectangle">
+          <img src="assets/icons/stamp.svg" />
+        </button>
+        <!-- The save button  -->
+        <button class="btn btn-outline-info" id="save">
+          <img src="assets/icons/save.svg" />
+        </button>
+        <!-- The clear button  -->
+        <button class="btn btn-outline-info" id="clear">
+          <img src="assets/icons/clear.svg" />
+        </button>
       </div>
     </div>
     <!-- jQuery -->
