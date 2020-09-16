@@ -107,8 +107,9 @@ class DrawingPolygon extends PaintFunction {
       // for fill
       this.contextDraft.fillStyle = curFillColor;
 
-      // transparent so that curve won't join, circle and triangle won't have outline
+      // transparent so that curve won't join, circle and triangle won't have outline and fill
       this.contextReal.strokeStyle = "transparent";
+      this.contextReal.fillStyle = "transparent";
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
