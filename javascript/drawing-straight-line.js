@@ -6,6 +6,7 @@ class DrawingStraightLine extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
+    this.contextReal.globalCompositeOperation = 'source-over';
     this.contextReal.strokeStyle = curStroke;
     this.contextReal.lineWidth = 5;
     this.contextReal.beginPath();
