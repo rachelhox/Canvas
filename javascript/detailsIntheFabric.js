@@ -66,7 +66,7 @@ canvas.add(path.set({ left: 100, top: 200 }));
 
 
 //   rect.set({ fill: 'red', strokeWidth: 5, stroke: 'rgba(100,200,200,0.5)' });
-  canvas.add(circle);
+//   canvas.add(circle);
 //   canvas.add(rect);
 //   canvas.add(triangle);
 //   console.log(rect.get('width'));
