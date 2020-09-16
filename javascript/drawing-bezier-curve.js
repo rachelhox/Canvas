@@ -62,19 +62,26 @@ class DrawingBezierCurve extends PaintFunction {
         this.variable = 1;
       } else if (this.variable === 1) {
         // 6. draw the real curve
+        this.firstX = coord[0];
+        this.firstY = coord[1];
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-        this.contextReal.strokeStyle = curStroke;
-        this.contextReal.lineWidth = 5;
-        this.contextReal.beginPath();
-        this.contextReal.moveTo(this.origX, this.origY);
-        this.contextReal.quadraticCurveTo(
+        this.contextDraft.strokeStyle = curStroke;
+        this.contextDraft.lineWidth = 5;
+        this.contextDraft.beginPath();
+        this.contextDraft.moveTo(this.origX, this.origY);
+        this.contextDraft.quadraticCurveTo(
           coord[0],
           coord[1],
           this.endX,
           this.endY
         );
-        this.contextReal.stroke();
-        this.variable = 0;
+        this.contextDraft.stroke();
+        // circle for user to drag to control point
+        this.contextDraft.fillStyle = "red";
+        this.contextDraft.beginPath();
+        this.contextDraft.arc(coord[0], coord[1], 8, 0, 2 * Math.PI);
+        this.contextDraft.fill();
+        this.variable = 2;
       }
     }
     onMouseLeave() {}
