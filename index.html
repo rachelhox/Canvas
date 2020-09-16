@@ -40,17 +40,14 @@
         </div>
         <div class="buttons side-car">
           <!-- The drawing rectangle button  -->
-          <button class="btn btn-outline-info" id="AddRect">
-            <img src="assets/icons/frame.svg" />
-          </button>
           <button class="btn btn-outline-info" id="drawing-rectangle">
             <img src="assets/icons/frame.svg" />
           <!-- The drawing triangle button  -->
-          <button class="btn btn-outline-info" id="AddCircle">
+          <button class="btn btn-outline-info" id="drawing-triangle">
             <img src="assets/icons/triangular.svg" />
           </button>
           <!-- The drawing polygon button  -->
-          <button class="btn btn-outline-info" id="AddMagi">
+          <button class="btn btn-outline-info" id="drawing-polygon">
             <img src="assets/icons/polygon.svg" />
           </button>
           <!-- The drawing straight-line button  -->
@@ -62,7 +59,7 @@
             <img src="assets/icons/curve.svg" />
           </button>
           <!-- The drawing line button  -->
-          <button class="btn btn-outline-info" id="testing-2">
+          <button class="btn btn-outline-info" id="drawing-line">
             <img src="assets/icons/drawing-line.svg" />
           </button>
           <!-- The eraser button  -->
@@ -88,8 +85,24 @@
         </div>
       </div>
       <div class="top-menu">
-        <!-- The stamp button  -->
-        <button class="btn btn-outline-info" id="stamp-rectangle">
+        <!-- The stamp rectangle button  -->
+        <button class="btn btn-outline-info" id="AddRect">
+          <img src="assets/icons/stamp.svg" />
+        </button>
+        <!-- The stamp circle button  -->
+        <button class="btn btn-outline-info" id="AddCircle">
+          <img src="assets/icons/stamp.svg" />
+        </button>
+        <!-- The stamp triangle button  -->
+        <button class="btn btn-outline-info" id="AddTriangle">
+          <img src="assets/icons/stamp.svg" />
+        </button>
+        <!-- The stamp arrow button  -->
+        <button class="btn btn-outline-info" id="AddArrow">
+          <img src="assets/icons/stamp.svg" />
+        </button>
+        <!-- The stamp magi button  -->
+        <button class="btn btn-outline-info" id="AddMagi">
           <img src="assets/icons/stamp.svg" />
         </button>
         <!-- The save button  -->
@@ -100,8 +113,12 @@
         <button class="btn btn-outline-info" id="clear">
           <img src="assets/icons/clear.svg" />
         </button>
-        <!-- The clear button  -->
-        <button class="btn btn-outline-info" id="testing">
+        <!-- The enabling fabric.js scaling button  -->
+        <button class="btn btn-outline-info" id="fabric-scaling">
+          <img src="assets/icons/clear.svg" />
+        </button>
+        <!-- The enabling drawing after fabric.js scaling button  -->
+        <button class="btn btn-outline-info" id="fabric-drawing">
           <img src="assets/icons/clear.svg" />
         </button>
       </div>
@@ -231,20 +248,21 @@
           );
         });
         let click = 0;
-        $("#testing").click(() => {
-          if (true) {
+        $("#AddRect").click(() => {
+          if (click === 0) {
             $('.upper-canvas').css('z-index', '2');
-            click ++;
+            click = 1;
           } else if (click === 1) {
             $('.upper-canvas').css('z-index', '3');
+            $('#canvas-draft').css('z-index', '2');
             click = 0;
           }
           
         });
-        $("#testing-2").click(() => {
-          $('.upper-canvas').css('z-index', '-1');
+        $("#drawing-line").click(() => {
+          $('.upper-canvas').css('z-index', '0');
           $('#canvas-real').css('z-index', '1');
-          $('#canvas-draft').css('z-index', '1');
+          $('#canvas-draft').css('z-index', '3');
         });
       });
     </script>

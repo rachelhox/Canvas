@@ -79,9 +79,6 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#canvas-draft {
-  background-color: transparent;
-}
 body {
   /* overflow: hidden; */
   position: relative;
