@@ -47,7 +47,7 @@ body {
   left: 0rem;
 }
 
-.container {
+#container {
   padding: 0rem;
   padding-right: 0rem;
   padding-left: 0rem;
@@ -56,6 +56,8 @@ body {
 
 .canvas-container {
   bottom: 0rem;
+  top: 0rem;
+  margin: auto;
 }
 
 .btn-outline-info {
@@ -180,7 +182,6 @@ body {
 #canvas-draft {
   z-index: 0;
   background-color: transparent;
-  top: 9rem;
 }
 
 /* external library olor pickr z-index dllm */
