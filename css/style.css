@@ -10,6 +10,7 @@
   bottom: 2rem;
   left: 10rem;
   right: 0rem;
+
 }
 
 .content {
@@ -28,6 +29,7 @@
 
 #canvas-draft {
   background-color: transparent;
+  display: none;
 }
 body {
   /* overflow: hidden; */
@@ -37,6 +39,7 @@ body {
 #canvas-container {
   height: 700px;
   position: relative;
+
   /* top: 2rem;
   bottom: 2rem;
   left: 2rem;
@@ -52,3 +55,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+/* .test {
+  display: inline-block; 
+  vertical-align: top; 
+  width: 800px; 
+  height: 600px;
+} */
