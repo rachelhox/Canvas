@@ -25,10 +25,13 @@ class DrawingPolygon extends PaintFunction {
       this.startAngle = 0;
       this.angle = (2 * Math.PI) / this.sides;
 
+      // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
       this.contextDraft.lineWidth = 5;
       this.contextDraft.lineJoin = "round";
+      // for fill
+      this.contextDraft.fillStyle = curFillColor;
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
@@ -44,8 +47,11 @@ class DrawingPolygon extends PaintFunction {
         this.contextDraft.lineTo(currentPointX, currentPointY);
       }
 
+      // for outline
       this.contextDraft.closePath();
       this.contextDraft.stroke();
+      // for fill
+      this.contextDraft.fill();
     }
   }
   onMouseMove(coord) {
@@ -60,10 +66,14 @@ class DrawingPolygon extends PaintFunction {
       this.startAngle = coord[1] * 0.007;
       this.angle = (2 * Math.PI) / this.sides;
 
+      // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
       this.contextDraft.lineWidth = 5;
       this.contextDraft.lineJoin = "round";
+
+      // for fill
+      this.contextDraft.fillStyle = curFillColor;
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
@@ -79,17 +89,24 @@ class DrawingPolygon extends PaintFunction {
         this.contextDraft.lineTo(currentPointX, currentPointY);
       }
 
+      // for outline
       this.contextDraft.closePath();
       this.contextDraft.stroke();
+      // for fill
+      this.contextDraft.fill();
     }
   }
 
   onMouseUp(coord) {
     if (this.variable === false) {
+      // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
       this.contextDraft.lineWidth = 5;
       this.contextDraft.lineJoin = "round";
+      // for fill
+      this.contextDraft.fillStyle = curFillColor;
+
       // transparent so that curve won't join, circle and triangle won't have outline
       this.contextReal.strokeStyle = "transparent";
 
@@ -109,14 +126,22 @@ class DrawingPolygon extends PaintFunction {
         this.contextDraft.lineTo(currentPointX, currentPointY);
       }
 
+      // for outline
       this.contextDraft.closePath();
       this.contextDraft.stroke();
+      // for fill
+      this.contextDraft.fill();
+
       this.variable = true;
+
     } else if (this.variable) {
+      // for outline
       this.contextReal.beginPath();
       this.contextReal.strokeStyle = curStroke;
       this.contextReal.lineWidth = 5;
       this.contextReal.lineJoin = "round";
+      // for fill
+      this.contextDraft.fillStyle = curFillColor;
 
       this.beginX = this.origX + this.radius * Math.cos(this.startAngle);
       this.beginY = this.origY - this.radius * Math.sin(this.startAngle);
@@ -140,8 +165,11 @@ class DrawingPolygon extends PaintFunction {
       this.variable = false;
     }
 
+    // for outline
     this.contextReal.closePath();
     this.contextReal.stroke();
+    //for fill
+    this.contextReal.fill();
   }
   onMouseLeave() {}
   onMouseEnter() {}

@@ -13,11 +13,17 @@ class DrawingCircle extends PaintFunction {
   }
 
   onDragging(coord, e) {
+    // for fill
     this.contextDraft.fillStyle = curFillColor;
+    // for outline
+    this.contextDraft.strokeStyle = curStroke;
+    this.contextDraft.lineWidth = 5;
+    // determining size of circle
     var radius = 0;
     var deltaX = this.origX - coord[0];
     var deltaY = this.origY - coord[1];
     radius = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    // for fill
     this.contextDraft.clearRect(
       0,
       0,
@@ -27,6 +33,8 @@ class DrawingCircle extends PaintFunction {
     this.contextDraft.beginPath();
     this.contextDraft.arc(this.origX, this.origY, radius, 0, Math.PI * 2);
     this.contextDraft.fill();
+    // for outline
+    this.contextDraft.stroke();
   }
 
   onMouseMove() {}
@@ -36,6 +44,7 @@ class DrawingCircle extends PaintFunction {
     var deltaX = this.origX - coord[0];
     var deltaY = this.origY - coord[1];
     radius = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    // for fill
     this.contextDraft.clearRect(
       0,
       0,
@@ -45,6 +54,10 @@ class DrawingCircle extends PaintFunction {
     this.contextReal.beginPath();
     this.contextReal.arc(this.origX, this.origY, radius, 0, Math.PI * 2);
     this.contextReal.fill();
+    // for outline
+    this.contextReal.strokeStyle = curStroke;
+    this.contextReal.lineWidth = 5;
+    this.contextReal.stroke();
   }
 
   onMouseLeave() {}

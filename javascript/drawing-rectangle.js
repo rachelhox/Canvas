@@ -13,6 +13,10 @@ class DrawingRectangle extends PaintFunction {
   // get the coordinates of the user's mouse
   onMouseDown(coord, event) {
     this.contextReal.globalCompositeOperation = "source-over";
+    this.contextReal.lineWidth = 5;
+    this.contextDraft.lineWidth = 5;
+    this.contextReal.strokeStyle = curStroke;
+    this.contextDraft.strokeStyle = curStroke;
     this.contextReal.fillStyle = curFillColor; //after releasing the mouse
     // this.contextReal.strokeStyle = curStroke; curStroke doesn't work yet T_T
     this.origX = coord[0];
@@ -24,12 +28,19 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.fillStyle = curFillColor;
     // this.contextDraft.strokeStyle = curStroke; curStroke doesn't work yet T_T
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+    this.contextDraft.strokeRect(
+      this.origX,
+      this.origY,
+      coord[0] - this.origX,
+      coord[1] - this.origY
+    );
     this.contextDraft.fillRect(
       this.origX,
       this.origY,
       coord[0] - this.origX,
       coord[1] - this.origY
     );
+
   }
 
   onMouseMove() {}
@@ -37,6 +48,12 @@ class DrawingRectangle extends PaintFunction {
   // clear the canvas and move the drawing to the real canvas
   onMouseUp(coord) {
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+    this.contextReal.strokeRect(
+      this.origX,
+      this.origY,
+      coord[0] - this.origX,
+      coord[1] - this.origY
+    );
     this.contextReal.fillRect(
       this.origX,
       this.origY,
