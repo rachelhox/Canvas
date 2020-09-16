@@ -24,15 +24,13 @@ class DrawingBezierCurve extends PaintFunction {
         this.contextDraft.lineTo(coord[0], coord[1]);
         this.contextDraft.stroke();
       } else if (this.variable === 1) {
-        // 5. second drag to 1st control point of real curve
+        // 5. second drag to controlpoint of real curve
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.origX, this.origY);
-        this.firstX = coord[0];
-        this.firstY = coord[1];
         this.contextDraft.quadraticCurveTo(
-          this.firstX,
-          this.firstY,
+          coord[0],
+          coord[1],
           this.endX,
           this.endY
         );
@@ -40,7 +38,7 @@ class DrawingBezierCurve extends PaintFunction {
         // circle for use to drag to control point
         this.contextDraft.fillStyle = "red";
         this.contextDraft.beginPath();
-        this.contextDraft.arc(firstX, firstY, 8, 0, 2 * Math.PI);
+        this.contextDraft.arc(coord[0], coord[1], 8, 0, 2 * Math.PI);
         this.contextDraft.fill();
       }
     }
@@ -63,20 +61,20 @@ class DrawingBezierCurve extends PaintFunction {
         // 4. initiate second dragging to find the control point
         this.variable = 1;
       } else if (this.variable === 1) {
-        // 6. after first dragging, mouseup to get the 2nd control point of real curve
+        // 6. draw the real curve
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-        this.contextDraft.strokeStyle = curStroke;
-        this.contextDraft.lineWidth = 5;
-        this.contextDraft.beginPath();
-        this.contextDraft.moveTo(this.origX, this.origY);
-        this.contextDraft.quadraticCurveTo(
+        this.contextReal.strokeStyle = curStroke;
+        this.contextReal.lineWidth = 5;
+        this.contextReal.beginPath();
+        this.contextReal.moveTo(this.origX, this.origY);
+        this.contextReal.quadraticCurveTo(
           coord[0],
           coord[1],
           this.endX,
           this.endY
         );
-        this.contextDraft.stroke();
-        this.variable = 2;
+        this.contextReal.stroke();
+        this.variable = 0;
       }
     }
     onMouseLeave() {}
