@@ -233,3 +233,9 @@ body {
 #stroke-width:focus {
   outline: none;
 }
+
+.colour-api {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+}

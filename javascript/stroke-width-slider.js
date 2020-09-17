@@ -3,7 +3,6 @@ $('#stroke-width-btn').click(() => {
 })
 
 let strokeWidth = $('#stroke-width').val();
-console.log(strokeWidth);
 
 $('#stroke-width').change(() => {
     strokeWidth = $('#stroke-width').val();
