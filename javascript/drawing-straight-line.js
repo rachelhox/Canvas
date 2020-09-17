@@ -6,9 +6,9 @@ class DrawingStraightLine extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
-    this.contextReal.globalCompositeOperation = 'source-over';
+    this.contextReal.globalCompositeOperation = "source-over";
     this.contextReal.strokeStyle = curStroke;
-    this.contextReal.lineWidth = 5;
+    this.contextReal.lineWidth = strokeWidth;
     this.contextReal.beginPath();
     this.origX = coord[0];
     this.origY = coord[1];
@@ -17,7 +17,7 @@ class DrawingStraightLine extends PaintFunction {
   onDragging(coord, event) {
     // this.contextReal.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.strokeStyle = curStroke;
-    this.contextDraft.lineWidth = 5;
+    this.contextDraft.lineWidth = strokeWidth;
     this.draw(coord[0], coord[1]);
   }
   onMouseMove() {}
@@ -26,7 +26,7 @@ class DrawingStraightLine extends PaintFunction {
     this.contextReal.moveTo(this.origX, this.origY);
     this.contextReal.lineTo(coord[0], coord[1]);
     this.contextReal.stroke();
-    savetosaveCard ();
+    savetosaveCard();
   }
   onMouseLeave() {}
   onMouseEnter() {}
