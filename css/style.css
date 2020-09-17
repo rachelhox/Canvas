@@ -200,7 +200,7 @@ body {
 }
 
 .upper-layer {
-  z-index: 100000000;
+  z-index: 0;
 }
 .collapse-button {
   display: none;
