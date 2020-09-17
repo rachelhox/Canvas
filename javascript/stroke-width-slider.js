@@ -1,5 +1,5 @@
 $('#stroke-width-btn').click(() => {
-    $('#stroke-width').toggle();
+    $('#stroke-width').toggle(); // 600
 })
 
 let strokeWidth = $('#stroke-width').val();
