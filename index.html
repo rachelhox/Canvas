@@ -277,6 +277,9 @@
         $("#drawing-bezier-curve").click(() => {
           currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
         });
+        $("#stamp-rectangle").click(() => {
+          $('.collapse-button').toggle(500);
+        })
       });
     </script>
   </body>
