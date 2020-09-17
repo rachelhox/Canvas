@@ -83,7 +83,7 @@
       <button class="btn btn-outline-info" id="clear">
         <img src="assets/icons/clear.svg" />
       </button>
-      <!-- The select and rotate button  -->
+      <!-- The select button  -->
       <button class="btn btn-outline-info" id="selection">
         <img src="assets/icons/clear.svg" />
       </button>
@@ -193,7 +193,7 @@
         currentFunction = new Selection(contextReal, contextDraft);
       });
       $("#fill-bucket").click(() => {
-        currentFunction = new FillBucket(contextReal, contextDraft);
+        currentFunction = new FillBucket(contextReal);
       });
       $("#drawing-quadratic-curve").click(() => {
         currentFunction = new DrawingQuadraticCurve(

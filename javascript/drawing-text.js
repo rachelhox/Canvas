@@ -26,9 +26,10 @@ class DrawingText extends PaintFunction {
             input.placeholder = "Type & hit 'Enter'. 'Esc' to delete";
             input.style.font = "Arial"; // font-family for placeholder
 
-            input.style.left = (mouseX + 300) + 'px'; //the position of input when you click mouse//
+            input.style.left = (mouseX + 380) + 'px'; //the position of input when you click mouse//
             input.style.top = (mouseY + 90) + 'px';
             document.body.appendChild(input);
+            input.focus();
             hasInput = true;
 
             input.onkeydown = function handleEnter(input) {
@@ -41,16 +42,13 @@ class DrawingText extends PaintFunction {
                     document.body.removeChild(this);
                     hasInput = false;
                 }
-
             };
-
             function drawText(txt) {
                 contextReal.textBaseline = 'middle';
                 contextReal.textAlign = 'left';
-                contextReal.font = "italic 300 3rem times"
+                contextReal.font = "normal 300 2rem times"
                 contextReal.fillText(txt, mouseX, mouseY);    
             }
-
         }
     }
 }

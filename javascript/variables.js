@@ -1,3 +1,3 @@
-let curStroke = "rgb(255, 255, 255)";
+let curStroke = "rgb(255, 0, 0)";
 
 let curFillColor = "rgb(0, 0, 0)";
