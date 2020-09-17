@@ -23,6 +23,8 @@ body {
   right: 10rem;
   margin: auto; */
   background-color: rgba(255, 255, 255);
+  height: 500px !important;
+  width: 700px !important;
 }
 
 .flexRow {
