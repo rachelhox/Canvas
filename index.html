@@ -65,19 +65,19 @@
           </button>
           <!-- The drawing line button  -->
           <button class="btn btn-outline-info" id="drawing-line">
-            <img src="assets/icons/drawing-line.svg" />
-          </button>
-          <!-- The eraser button  -->
-          <button class="btn btn-outline-info" id="eraser">
-            <img src="assets/icons/drawing-line.svg" />
+            <img src="assets/icons/pen.svg" />
           </button>
           <!-- The drawing circle button  -->
           <button class="btn btn-outline-info" id="drawing-circle">
-            <img src="assets/icons/drawing-circle.svg" />
+            <img src="assets/icons/circle.svg" />
           </button>
           <!-- The drawing text button  -->
           <button class="btn btn-outline-info" id="drawing-text">
             <img src="assets/icons/text.svg" />
+          </button>
+          <!-- The eraser button  -->
+          <button class="btn btn-outline-info" id="eraser">
+            <img src="assets/icons/eraser.svg" />
           </button>
           <!-- Color picker button -->
           <button id="my_picker">
@@ -94,13 +94,56 @@
         <button class="btn btn-outline-info" id="stamp-rectangle">
           <img src="assets/icons/stamp.svg" />
         </button>
-        <!-- The save button  -->
-        <button class="btn btn-outline-info" id="save">
-          <img src="assets/icons/save.svg" />
-        </button>
+        <!-- collapse buttons -->
+        <div class="collapse-button">
+          <!-- The circle stamp button  -->
+          <button class="btn btn-outline-info" id="AddCircle">
+            <img src="assets/icons/circle.svg" />
+          </button>
+          <!-- The triangle stamp button  -->
+          <button class="btn btn-outline-info" id="AddTriangle">
+            <img src="assets/icons/triangular.svg" />
+          </button>
+          <!-- The rectangle stamp button  -->
+          <button class="btn btn-outline-info" id="AddRect">
+            <img src="assets/icons/frame.svg" />
+          </button>
+          <!-- The arrow stamp button  -->
+          <button class="btn btn-outline-info" id="AddArrow">
+            <img src="assets/icons/arrow.svg" />
+          </button>
+          <!-- The wizard stamp button  -->
+          <button class="btn btn-outline-info" id="AddMagi">
+            <img src="assets/icons/wizard.svg" />
+          </button>
+        </div>
         <!-- The clear button  -->
         <button class="btn btn-outline-info" id="clear">
           <img src="assets/icons/clear.svg" />
+        </button>
+        <!-- The stroke width button  -->
+        <button class="btn btn-outline-info" id="stroke-width">
+          <img src="assets/icons/line-width.svg" />
+        </button>
+        <!-- The fill-bucket button  -->
+        <button class="btn btn-outline-info" id="fill-bucket">
+          <img src="assets/icons/fill-bucket.svg" />
+        </button>
+        <!-- The selection button  -->
+        <button class="btn btn-outline-info" id="selection">
+          <img src="assets/icons/selection-tool.svg" />
+        </button>
+        <!-- The redo button  -->
+        <button class="btn btn-outline-info" id="redo">
+          <img src="assets/icons/redo.svg" />
+        </button>
+        <!-- The undo button  -->
+        <button class="btn btn-outline-info" id="undo">
+          <img src="assets/icons/undo.svg" />
+        </button>
+        <!-- The save button  -->
+        <button class="btn btn-outline-info" id="save">
+          <img src="assets/icons/save.svg" />
         </button>
       </div>
     </div>
@@ -232,11 +275,11 @@
           );
         });
         $("#drawing-bezier-curve").click(() => {
-          currentFunction = new DrawingBezierCurve(
-            contextReal,
-            contextDraft
-          );
+          currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
         });
+        $("#stamp-rectangle").click(() => {
+          $('.collapse-button').toggle(500);
+        })
       });
     </script>
   </body>
