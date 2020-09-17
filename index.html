@@ -209,6 +209,11 @@
     <script src="./javascript/clear.js" type="text/javascript"></script>
     <!-- The fabric functionality  -->
     <script src="./javascript/detailsIntheFabric.js" type="text/javascript"></script>
+    <!-- The fill bucket functionality  -->
+    <script src="./javascript/fill-bucket.js" type="text/javascript"></script>
+    <!-- The selection functionality  -->
+    <script src="./javascript/selection.js" type="text/javascript"></script>
+
     <!-- Color picker functionality -->
     <script type="text/javascript">
       const button = document.getElementById("my_picker");
@@ -266,6 +271,12 @@
         });
         $("#drawing-straight-line").click(() => {
           currentFunction = new DrawingStraightLine(contextReal, contextDraft);
+        });
+        $("#fill-bucket").click(() => {
+          currentFunction = new FillBucket(contextReal, contextDraft);
+        });
+        $("#selection").click(() => {
+          currentFunction = new Selection(contextReal, contextDraft);
         });
         $("#drawing-quadratic-curve").click(() => {
           currentFunction = new DrawingQuadraticCurve(
