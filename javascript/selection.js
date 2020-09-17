@@ -78,6 +78,7 @@ class Selection extends PaintFunction{
             this.origY = coord[1] - this.obj.height/2;
             this.objX = coord[0] + this.obj.width/2;
             this.objY = coord[1] + this.obj.height/2;
+            savetosaveCard ();
         }
     };
 
