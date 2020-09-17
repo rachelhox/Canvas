@@ -1,7 +1,13 @@
+<div style="
+  padding: 1rem 0;
+">
+<p align="center">
 # Canvas 🎨
 
-An online web application to emulate real-time drawing on a canvas.
 <img src="https://media.giphy.com/media/wclQAS9AIUUW6W5bcl/giphy.gif" width="350"/>
+</p>
+
+An online web application to emulate real-time drawing on a canvas.
 
 ## How to play
 
@@ -53,3 +59,5 @@ UI: Photoshop-inspired design for the best and familiar User Exerpeerience.
 - Mika Fung
 - Charles Choi
 - Bibek Rajbhandari
+
+</div>
