@@ -28,7 +28,7 @@ class DrawingPolygon extends PaintFunction {
       // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
-      this.contextDraft.lineWidth = 5;
+      this.contextDraft.lineWidth = strokeWidth;
       this.contextDraft.lineJoin = "round";
       // for fill
       this.contextDraft.fillStyle = curFillColor;
@@ -69,7 +69,7 @@ class DrawingPolygon extends PaintFunction {
       // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
-      this.contextDraft.lineWidth = 5;
+      this.contextDraft.lineWidth = strokeWidth;
       this.contextDraft.lineJoin = "round";
 
       // for fill
@@ -102,7 +102,7 @@ class DrawingPolygon extends PaintFunction {
       // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
-      this.contextDraft.lineWidth = 5;
+      this.contextDraft.lineWidth = strokeWidth;
       this.contextDraft.lineJoin = "round";
       // for fill
       // this.contextDraft.fillStyle = curFillColor;
@@ -139,7 +139,7 @@ class DrawingPolygon extends PaintFunction {
       // for outline
       this.contextReal.beginPath();
       this.contextReal.strokeStyle = curStroke;
-      this.contextReal.lineWidth = 5;
+      this.contextReal.lineWidth = strokeWidth;
       this.contextReal.lineJoin = "round";
       // for fill
       this.contextDraft.fillStyle = curFillColor;

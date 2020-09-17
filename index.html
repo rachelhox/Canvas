@@ -105,6 +105,13 @@
         <button class="btn btn-outline-info" id="AddMagi">
           <img src="assets/icons/stamp.svg" />
         </button>
+        <!-- stroke width button -->
+        <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#stroke-width-div" id="stroke-width-btn">
+          <img src="assets/icons/stamp.svg" />
+          
+        </button>
+        
+        
         <!-- The save button  -->
         <button class="btn btn-outline-info" id="save">
           <img src="assets/icons/save.svg" />
@@ -114,6 +121,10 @@
           <img src="assets/icons/clear.svg" />
         </button>
       </div>
+      <!-- stroke width slider -->
+      <input type="range" id="stroke-width" min="2" max="40" value="2" title="Stroke Width">
+        
+
     </div>
     <!-- jQuery -->
     <script
@@ -206,6 +217,8 @@
         curFillColor = fillColor;
       });
     </script>
+    <!-- The stroke width slider functionality  -->
+    <script src="./javascript/stroke-width-slider.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(() => {
         currentFunction = new DrawingLine(contextReal);
@@ -252,7 +265,6 @@
 
         let click = 0;
         let fabricFunction = $('.top-menu').children().length;
-        console.log(fabricFunction);
         for (let i = 0; i < fabricFunction; i++) {
           $('.top-menu').children().eq(i).click(() => {
             if (click === 0) {

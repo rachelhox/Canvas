@@ -201,3 +201,32 @@ body {
 .upper-layer {
   z-index: 100000000;
 }
+
+/* stroke width slider */
+#stroke-width {
+  position: absolute;
+  bottom: 45rem;
+  left: 59rem;
+}
+
+#stroke-width {
+  -webkit-appearance: none;
+}
+#stroke-width::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: solid;
+  border-color: #ddd;
+  border-radius: 40px;
+}
+
+#stroke-width::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: goldenrod;
+  margin-top: -8px;
+}

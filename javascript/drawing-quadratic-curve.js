@@ -64,7 +64,7 @@ class DrawingQuadraticCurve extends PaintFunction {
       // 6. draw the real curve
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextReal.strokeStyle = curStroke;
-      this.contextReal.lineWidth = 5;
+      this.contextReal.lineWidth = strokeWidth;
       this.contextReal.beginPath();
       this.contextReal.moveTo(this.origX, this.origY);
       this.contextReal.quadraticCurveTo(

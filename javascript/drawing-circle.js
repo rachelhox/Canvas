@@ -17,7 +17,7 @@ class DrawingCircle extends PaintFunction {
     this.contextDraft.fillStyle = curFillColor;
     // for outline
     this.contextDraft.strokeStyle = curStroke;
-    this.contextDraft.lineWidth = 5;
+    this.contextDraft.lineWidth = strokeWidth;
     // determining size of circle
     var radius = 0;
     var deltaX = this.origX - coord[0];
@@ -56,7 +56,7 @@ class DrawingCircle extends PaintFunction {
     this.contextReal.fill();
     // for outline
     this.contextReal.strokeStyle = curStroke;
-    this.contextReal.lineWidth = 5;
+    this.contextReal.lineWidth = strokeWidth;
     this.contextReal.stroke();
   }
 
