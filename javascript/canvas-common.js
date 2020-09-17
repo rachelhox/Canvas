@@ -13,13 +13,14 @@ var loadCard = new Image();
 $('#canvas-draft').mousedown(function (e) {
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
-    step++
-    saveCard.push(canvasReal.toDataURL());
-    if (step < saveCard.length) {
-        saveCard.length = step;
-    }
-    console.log(`this is mousedown step ${step}`);
-    console.log(saveCard);
+    // step++
+    // saveCard.push(canvasReal.toDataURL());
+    // if (step < saveCard.length) {
+    //     saveCard.length = step;
+    //     console.log(`unknown condition fired`)
+    // }
+    // console.log(`this is mousedown step ${step}`);
+    // console.log(saveCard);
     currentFunction.onMouseDown([mouseX, mouseY], e);
     dragging = true;
 });
@@ -68,6 +69,10 @@ $('#canvas-draft').mouseup(function (e) {
     dragging = false;
     let mouseX = e.offsetX;
     let mouseY = e.offsetY;
+    step++
+    saveCard.push(canvasReal.toDataURL());
+    console.log(`this is mouseup step ${step}`);
+    console.log(saveCard);
     currentFunction.onMouseUp([mouseX, mouseY], e);
 });
 
