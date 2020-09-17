@@ -270,7 +270,7 @@
         $("#drawing-straight-line").click(() => {
           currentFunction = new DrawingStraightLine(contextReal, contextDraft);
         });
-        $("#stamp-rectangle").click(() => {
+        $("#fill-bucket").click(() => {
           currentFunction = new FillBucket(contextReal, contextDraft);
         });
         $("#selection").click(() => {
@@ -286,8 +286,8 @@
           currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
         });
         $("#stamp-rectangle").click(() => {
-          $('.collapse-button').toggle(500);
-        })
+          $(".collapse-button").toggle(500);
+        });
       });
     </script>
   </body>
