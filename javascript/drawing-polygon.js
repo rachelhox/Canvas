@@ -99,6 +99,7 @@ class DrawingPolygon extends PaintFunction {
 
   onMouseUp(coord) {
     if (this.variable === false) {
+      
       // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
@@ -162,15 +163,13 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.globalCompositeOperation = "source-over";
       this.contextReal.closePath();
       this.contextReal.stroke();
-
+      this.contextReal.fillStyle = curFillColor;
+      this.contextReal.fill();
+      savetosaveCard ();
       this.variable = false;
     }
 
-    // for outline
-    this.contextReal.closePath();
-    this.contextReal.stroke();
-    //for fill
-    this.contextReal.fill();
+    
   }
   onMouseLeave() {}
   onMouseEnter() {}

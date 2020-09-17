@@ -18,7 +18,10 @@ class Eraser extends PaintFunction {
     }
   
     onMouseMove() {}
-    onMouseUp() {}
+    onMouseUp() {
+      this.context.globalCompositeOperation = "source-over";
+      savetosaveCard ();
+    }
     onMouseLeave() {}
     onMouseEnter() {}
   
@@ -27,5 +30,6 @@ class Eraser extends PaintFunction {
       this.context.lineTo(x, y);
       this.context.moveTo(x, y);
       this.context.stroke();
+    
     }
   }

@@ -74,6 +74,7 @@ class DrawingQuadraticCurve extends PaintFunction {
         this.endY
       );
       this.contextReal.stroke();
+      savetosaveCard ();
       this.variable = 0;
     }
   }

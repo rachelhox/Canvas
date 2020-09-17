@@ -23,14 +23,17 @@ class DrawingLine extends PaintFunction {
   }
 
   onMouseMove() {}
-  onMouseUp() {}
+
+  onMouseUp() {
+    savetosaveCard ();
+  }
+
   onMouseLeave() {}
   onMouseEnter() {}
 
   draw(x, y) {
     this.context.lineTo(x, y);
-    this.context.moveTo(x, y);
-    this.context.closePath();
+
     this.context.stroke();
   }
 }

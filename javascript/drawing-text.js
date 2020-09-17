@@ -35,6 +35,7 @@ class DrawingText extends PaintFunction {
         if (input.key === "Enter") {
           drawText(this.value);
           document.body.removeChild(this);
+          savetosaveCard ();
           hasInput = false;
         }
         if (input.key === "Escape") {

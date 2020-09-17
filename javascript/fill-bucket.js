@@ -96,4 +96,8 @@ class FillBucket extends PaintFunction {
       imgData.data[pixelPos + 3] = 255;
     }
   }
+  onMouseUp() {
+    savetosaveCard ();
+  }
 }
+
