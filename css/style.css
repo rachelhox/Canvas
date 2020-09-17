@@ -155,3 +155,35 @@ body {
 .collapse-button {
   display: none;
 }
+
+/* stroke width slider */
+#stroke-width {
+  /* position: absolute;
+  top: 10rem;
+  left: 59rem; */
+  -webkit-appearance: none;
+  background: none;
+  display: none;
+}
+
+#stroke-width::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 8px;
+  /* colour of the slider */
+  background: black;
+  border-radius: 5px;
+}
+
+#stroke-width::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  /* colour of the circle */
+  background: #fff;
+  margin-top: -5px;
+}
+#stroke-width:focus {
+  outline: none;
+}

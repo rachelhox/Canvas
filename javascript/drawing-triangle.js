@@ -48,7 +48,7 @@ class DrawingTriangle extends PaintFunction {
     this.contextReal.shadowColor = curFillColor;
     // for outline
     this.contextReal.strokeStyle = curStroke;
-    this.contextReal.lineWidth = 5;
+    this.contextReal.lineWidth = strokeWidth;
     // for fill
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextReal.beginPath();
@@ -59,7 +59,7 @@ class DrawingTriangle extends PaintFunction {
     // for outline
     this.contextReal.closePath();
     this.contextReal.stroke();
-    savetosaveCard ();
+    savetosaveCard();
   }
   onMouseLeave() {}
   onMouseEnter() {}

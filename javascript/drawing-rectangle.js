@@ -13,8 +13,8 @@ class DrawingRectangle extends PaintFunction {
   // get the coordinates of the user's mouse
   onMouseDown(coord, event) {
     this.contextReal.globalCompositeOperation = "source-over";
-    this.contextReal.lineWidth = 5;
-    this.contextDraft.lineWidth = 5;
+    this.contextReal.lineWidth = strokeWidth;
+    this.contextDraft.lineWidth = strokeWidth;
     this.contextReal.strokeStyle = curStroke;
     this.contextDraft.strokeStyle = curStroke;
     this.contextReal.fillStyle = curFillColor; //after releasing the mouse
@@ -40,7 +40,6 @@ class DrawingRectangle extends PaintFunction {
       coord[0] - this.origX,
       coord[1] - this.origY
     );
-
   }
 
   onMouseMove() {}
@@ -60,7 +59,7 @@ class DrawingRectangle extends PaintFunction {
       coord[0] - this.origX,
       coord[1] - this.origY
     );
-    savetosaveCard ();
+    savetosaveCard();
   }
   onMouseLeave() {}
   onMouseEnter() {}
