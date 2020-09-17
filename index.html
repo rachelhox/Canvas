@@ -291,6 +291,13 @@
         });
         $("#stamp-rectangle").click(() => {
           $(".collapse-button").toggle(500);
+          let image = canvasReal.toDataURL();
+          canvas.setBackgroundImage(image, canvas.renderAll.bind(canvas), {
+            // Optionally add an opacity lvl to the image
+            backgroundImageOpacity: 0.5,
+            // should the image be resized to fit the container?
+            backgroundImageStretch: false
+        });
         });
         // to enable drawing after stamp is initiated
         let ourDrawFunction = $('.side-car').children().length;
@@ -316,6 +323,7 @@
           }
           })
         }
+
       });
         
 

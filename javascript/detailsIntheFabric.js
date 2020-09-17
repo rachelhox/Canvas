@@ -60,10 +60,27 @@ c0,7.66,2.98,14.87,8.4,20.29l0,0c5.42,5.42,12.62,8.4,20.28,8.4c7.66,0,14.87\
   canvas.add(path.set({ left: 100, top: 200 , fill: curFillColor, stroke: curStroke}));
 }
 
+function loadSaveCard() {
+  var ctx = contextReal;
+  console.log(saveCard.length-1);
+loadCard.src = saveCard[saveCard.length-1];
+ 
+  
+  console.log(`removed from Savedcard and saved to the redolist`);
+  loadCard.onload = function () {
+      ctx.drawImage(loadCard, 0, 0);
+  }
+  console.log(saveCard);
+};
+
+function saveForFabric() {
+
+}
 
 
 
 $("#AddRect").click(function () {
+  // loadSaveCard();
   AddRect();
 });
 $("#AddTriangle").click(function () {

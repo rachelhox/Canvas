@@ -35,7 +35,7 @@ $("#redo").click(() => {
 });
 
 // it save and add step and save to saveCard
-function savetosaveCard () {
+function savetosaveCard() {
     step++
     if (step < saveCard.length) { 
         saveCard.length = step;
@@ -43,4 +43,5 @@ function savetosaveCard () {
      }
     saveCard.push(canvasReal.toDataURL());
     console.log(`this saved to saveCard`);
+    console.log(saveCard);
 }
