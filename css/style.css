@@ -204,9 +204,9 @@ body {
 
 /* stroke width slider */
 #stroke-width {
-  position: absolute;
-  bottom: 45rem;
-  left: 59rem;
+  /* position: absolute;
+  top: 10rem;
+  left: 59rem; */
   -webkit-appearance: none;
   background: none;
   display: none;
