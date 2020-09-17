@@ -7,13 +7,16 @@ class DrawingLine extends PaintFunction {
   constructor(contextReal) {
     super();
     this.context = contextReal;
+    
   }
 
   // On mouse down, ensure that the pen has these features
   onMouseDown(coord, event) {
+    
     this.context.strokeStyle = curStroke;
     this.context.lineJoin = "round";
     this.context.lineWidth = 5;
+    this.context.globalCompositeOperation = 'source-over';
     this.context.beginPath();
     this.context.moveTo(coord[0], coord[1]);
     this.draw(coord[0], coord[1]);

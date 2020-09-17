@@ -24,18 +24,18 @@
   <body>
     <div class="big-container">
       <div class="flexRow">
-        <div class="container" id="canvas-container">
+        <div id="container canvas-container" class="canvas-container">
           <canvas
             id="canvas-real"
             class="canvas"
-            width="700rem"
-            height="500rem"
+            width="700px"
+            height="500px"
           ></canvas>
           <canvas
             id="canvas-draft"
             class="canvas"
-            width="700rem"
-            height="500rem"
+            width="700px"
+            height="500px"
           ></canvas>
         </div>
         <div class="buttons side-car">
@@ -207,6 +207,11 @@
     <script src="./javascript/save.js" type="text/javascript"></script>
     <!-- The clear functionality  -->
     <script src="./javascript/clear.js" type="text/javascript"></script>
+    <!-- The fabric functionality  -->
+    <script
+      src="./javascript/detailsIntheFabric.js"
+      type="text/javascript"
+    ></script>
     <!-- The undo Redo -->
     <script src="./javascript/undoredo.js" type="text/javascript"></script>
     <!-- The fill bucket functionality  -->
@@ -289,7 +294,55 @@
         });
         $("#stamp-rectangle").click(() => {
           $(".collapse-button").toggle(500);
+          let image = canvasReal.toDataURL();
+          console.log(canvas);
+          canvas.setBackgroundImage(image, canvas.renderAll.bind(canvas), {
+            // // Optionally add an opacity lvl to the image
+            backgroundImageOpacity: 1,
+            // // should the image be resized to fit the container?
+            backgroundImageStretch: false,
+            backgroundSize: 50,
+            backgroundPosition: "left top",
+            backgroundWidth: 700,
+            backgroundHeight: 500,
+            // // Needed to position backgroundImage at 0/0
+            originX: "left",
+            originY: "top",
+            // scaleX: canvas.width / image.width,
+            // scaleY: canvas.height / image.height,
+          });
         });
+        // to enable drawing after stamp is initiated
+        let ourDrawFunction = $(".side-car").children().length;
+        for (let i = 0; i < ourDrawFunction - 2; i++) {
+          $(".side-car")
+            .children()
+            .eq(i)
+            .click(() => {
+              $(".upper-canvas").css("z-index", "-1");
+              $("#canvas-real").css("z-index", "-1");
+              $("#canvas-draft").css("z-index", "0");
+            });
+        }
+        let click = 0;
+        let fabricFunction = $(".top-menu").children().length;
+        console.log(fabricFunction);
+        for (let i = 0; i < fabricFunction; i++) {
+          $(".top-menu")
+            .children()
+            .eq(i)
+            .click(() => {
+              if (click === 0) {
+                $(".upper-canvas").css("z-index", "0");
+                $("#canvas-draft").css("z-index", "-1");
+                click = 1;
+              } else if (click === 1) {
+                $(".upper-canvas").css("z-index", "3");
+                $("#canvas-draft").css("z-index", "2");
+                click = 0;
+              }
+            });
+        }
       });
     </script>
   </body>
