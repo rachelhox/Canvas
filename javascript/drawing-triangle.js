@@ -25,7 +25,7 @@ class DrawingTriangle extends PaintFunction {
     this.contextDraft.fillStyle = curFillColor;
     // for outline
     this.contextDraft.strokeStyle = curStroke;
-    this.contextDraft.lineWidth = 5;
+    this.contextDraft.lineWidth = strokeWidth;
     // for fill
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.beginPath();
