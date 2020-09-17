@@ -1,6 +1,7 @@
 # Canvas 🎨
 
 An online web application to emulate real-time drawing on a canvas.
+<img src="https://media.giphy.com/media/wclQAS9AIUUW6W5bcl/giphy.gif" width="350"/>
 
 ## How to play
 
