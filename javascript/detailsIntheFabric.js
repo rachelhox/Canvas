@@ -1,13 +1,16 @@
 // var canvas = new fabric.Canvas("canvas-real");
 canvas = new fabric.Canvas("canvas-real");
 // contextFabric = canvas.getContext("2d");
-console.log(canvas);
+// console.log(canvas);
 var canvasLower = document.getElementsByTagName("canvas")[0];
 canvasLower.width = 700;
 canvasLower.height = 500;
 var canvasUpper = document.getElementsByTagName("canvas")[1];
 canvasUpper.width = 700;
 canvasUpper.height = 500;
+
+canvas.width = 700;
+canvas.height = 500;
 
 function AddRect() {
   var rect = new fabric.Rect({
@@ -99,6 +102,12 @@ $("#AddMagi").click(function () {
 $("#AddArrow").click(function () {
   AddArrow();
 });
+
+var shape = canvas.getActiveObject();
+shape.set({ height: 500, width: 700 });
+// console.log(shape);
+shape.setCoords();
+canvas.renderAll();
 
 //   rect.set({ fill: 'red', strokeWidth: 5, stroke: 'rgba(100,200,200,0.5)' });
 //   canvas.add(circle);
