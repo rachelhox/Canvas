@@ -153,13 +153,11 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-
     <!-- Color Picker Library -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@r-tek/colr_pickr@1.2.0/build/colr_pickr.min.js"
     ></script>
-
     <!-- declaring variables -->
     <script type="text/javascript" src="javascript/variables.js"></script>
     <!-- The drawing functionality  -->
@@ -173,7 +171,6 @@
       src="./javascript/drawing-rectangle.js"
       type="text/javascript"
     ></script>
-
     <!-- The drawing text functionality -->
     <script src="./javascript/drawing-text.js" type="text/javascript"></script>
     <!-- The drawing circle functionality  -->
@@ -210,6 +207,11 @@
     <script src="./javascript/save.js" type="text/javascript"></script>
     <!-- The clear functionality  -->
     <script src="./javascript/clear.js" type="text/javascript"></script>
+    <!-- The fill bucket functionality  -->
+    <script src="./javascript/fill-bucket.js" type="text/javascript"></script>
+    <!-- The selection functionality  -->
+    <script src="./javascript/selection.js" type="text/javascript"></script>
+
     <!-- Color picker functionality -->
     <script type="text/javascript">
       const button = document.getElementById("my_picker");
@@ -268,6 +270,12 @@
         $("#drawing-straight-line").click(() => {
           currentFunction = new DrawingStraightLine(contextReal, contextDraft);
         });
+        $("#fill-bucket").click(() => {
+          currentFunction = new FillBucket(contextReal, contextDraft);
+        });
+        $("#selection").click(() => {
+          currentFunction = new Selection(contextReal, contextDraft);
+        });
         $("#drawing-quadratic-curve").click(() => {
           currentFunction = new DrawingQuadraticCurve(
             contextReal,
@@ -278,8 +286,8 @@
           currentFunction = new DrawingBezierCurve(contextReal, contextDraft);
         });
         $("#stamp-rectangle").click(() => {
-          $('.collapse-button').toggle(500);
-        })
+          $(".collapse-button").toggle(500);
+        });
       });
     </script>
   </body>
