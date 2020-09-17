@@ -291,12 +291,19 @@
         });
         $("#stamp-rectangle").click(() => {
           $(".collapse-button").toggle(500);
+          $(".upper-canvas").css('width', '700px');
+          $(".upper-canvas").css('height', '500px');
           let image = canvasReal.toDataURL();
           canvas.setBackgroundImage(image, canvas.renderAll.bind(canvas), {
-            // Optionally add an opacity lvl to the image
-            backgroundImageOpacity: 0.5,
-            // should the image be resized to fit the container?
-            backgroundImageStretch: false
+            // // Optionally add an opacity lvl to the image
+            // backgroundImageOpacity: 0.5,
+            // // should the image be resized to fit the container?
+            // backgroundImageStretch: false
+            width: canvas.width,
+            height: canvas.height,
+            // Needed to position backgroundImage at 0/0
+            originX: 'left',
+            originY: 'top'
         });
         });
         // to enable drawing after stamp is initiated
