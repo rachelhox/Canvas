@@ -26,6 +26,7 @@ class DrawingStraightLine extends PaintFunction {
     this.contextReal.moveTo(this.origX, this.origY);
     this.contextReal.lineTo(coord[0], coord[1]);
     this.contextReal.stroke();
+    savetosaveCard ();
   }
   onMouseLeave() {}
   onMouseEnter() {}

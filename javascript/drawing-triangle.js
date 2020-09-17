@@ -59,25 +59,7 @@ class DrawingTriangle extends PaintFunction {
     // for outline
     this.contextReal.closePath();
     this.contextReal.stroke();
-
-    // Fabric
-    // for fill
-    this.contextFabric.fillStyle = curFillColor;
-    this.contextFabric.shadowBlur = 0;
-    this.contextFabric.shadowColor = curFillColor;
-    // for outline
-    this.contextFabric.strokeStyle = curStroke;
-    this.contextFabric.lineWidth = 5;
-    // for fill
-    // this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-    this.contextFabric.beginPath();
-    this.contextFabric.moveTo(this.origX, this.origY);
-    this.contextFabric.lineTo(coord[0], coord[1]);
-    this.contextFabric.lineTo(this.origX + (this.origX - coord[0]), coord[1]);
-    this.contextFabric.fill();
-    // for outline
-    this.contextFabric.closePath();
-    this.contextFabric.stroke();
+    savetosaveCard ();
   }
   onMouseLeave() {}
   onMouseEnter() {}
