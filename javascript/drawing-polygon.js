@@ -99,6 +99,7 @@ class DrawingPolygon extends PaintFunction {
 
   onMouseUp(coord) {
     if (this.variable === false) {
+      step--
       // for outline
       this.contextDraft.beginPath();
       this.contextDraft.strokeStyle = curStroke;
