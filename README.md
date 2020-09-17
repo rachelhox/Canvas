@@ -11,6 +11,7 @@ An online web application to emulate real-time drawing on a canvas.
 2. Basic Lines: straight line, quadratic curve, bezier curve, freehand drawing
 3. Textbox
 
+
 ### Functionalities
 1. Undo & Redo
 2. Erase & clear
@@ -19,20 +20,24 @@ An online web application to emulate real-time drawing on a canvas.
 5. Bucket fill
 6. Stroke width
 
+
 ### Stamp function with Fabric.js
 1. Basic Shapes: rectangle, triangle, circle
 2. Arrow & picture
 
+
 ### Colour picker with Colr Pickr
 
+
 ### Interactive game
-1. 
+
 
 ## Libraries
+* [Bootstrap]
 
 ## Authors
 
 - Yuen Yi Ho, Rachel
-- <!-- - your name -->
+- Fung Cheuk Man, Mika
 - <!-- - your name -->
 - <!-- - your name -->
