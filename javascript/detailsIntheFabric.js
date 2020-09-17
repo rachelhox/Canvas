@@ -1,5 +1,5 @@
 // var canvas = new fabric.Canvas("canvas-real");
-canvas = new fabric.Canvas("canvas-real");
+canvas = new fabric.Canvas("canvas-draft");
 // contextFabric = canvas.getContext("2d");
 // console.log(contextFabric);
 
