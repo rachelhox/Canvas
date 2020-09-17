@@ -3,7 +3,7 @@
 An online web application to emulate real-time drawing on a canvas.
 
 ## How to play
-This Photoshop-like drawing application allows you to create image by drawing with your mouse 
+This Photoshop-like drawing application allows you to create image by drawing with your mouse and using our default shapes.  
 
 ## Features
 
