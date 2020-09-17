@@ -163,15 +163,9 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.closePath();
       this.contextReal.stroke();
       this.contextReal.fillStyle = curFillColor;
-
+      this.contextReal.fill();
       this.variable = false;
     }
-
-    // for outline
-    this.contextReal.closePath();
-    this.contextReal.stroke();
-    //for fill
-    this.contextReal.fill();
   }
   onMouseLeave() {}
   onMouseEnter() {}
