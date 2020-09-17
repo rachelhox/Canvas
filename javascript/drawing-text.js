@@ -27,7 +27,7 @@ class DrawingText extends PaintFunction {
             input.style.font = "Arial"; // font-family for placeholder
 
             input.style.left = (mouseX + 380) + 'px'; //the position of input when you click mouse//
-            input.style.top = (mouseY + 90) + 'px';
+            input.style.top = (mouseY + 70) + 'px';
             document.body.appendChild(input);
             input.focus();
             hasInput = true;
