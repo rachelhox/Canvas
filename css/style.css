@@ -150,3 +150,7 @@ body {
   top: 0rem;
   background-color: rgb(61, 59, 59);
 }
+
+.collapse-button {
+  display: none;
+}
