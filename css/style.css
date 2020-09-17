@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  overflow: visible;
 }
 
 body {
@@ -98,7 +99,7 @@ body {
   height: 1.5rem;
   position: absolute;
   bottom: 1.2rem;
-  left: 0.1rem;
+  left: 0.3rem;
   background: #fff;
   border: transparent;
   border-radius: 0px;
@@ -111,7 +112,7 @@ body {
   bottom: 2rem;
   width: 1.5rem;
   height: 1.5rem;
-  left: 0.7rem;
+  left: 0.8rem;
   background: #fff;
   border: transparent;
   border-radius: 0px;
@@ -119,7 +120,7 @@ body {
 }
 
 .buttons:last-child {
-  padding-bottom: 4.5rem;
+  padding-bottom: 3rem;
 }
 
 #my_fill_color_picker > #tooltip2 {
@@ -200,4 +201,7 @@ body {
 
 .upper-layer {
   z-index: 100000000;
+}
+.collapse-button {
+  display: none;
 }
