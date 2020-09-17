@@ -121,14 +121,29 @@
         <button class="btn btn-outline-info" id="clear">
           <img src="assets/icons/clear.svg" />
         </button>
-        <!-- The stroke width button  -->
-        <button class="btn btn-outline-info" id="stroke-width">
-          <img src="assets/icons/line-width.svg" />
-        </button>
         <!-- The fill-bucket button  -->
         <button class="btn btn-outline-info" id="fill-bucket">
           <img src="assets/icons/fill-bucket.svg" />
         </button>
+        <!-- stroke width button -->
+        <button
+          class="btn btn-outline-info"
+          type="button"
+          data-toggle="collapse"
+          data-target="#stroke-width-div"
+          id="stroke-width-btn"
+        >
+          <img src="assets/icons/line-width.svg" />
+        </button>
+        <!-- stroke width slider -->
+        <input
+          type="range"
+          id="stroke-width"
+          min="2"
+          max="40"
+          value="2"
+          title="Stroke Width"
+        />
         <!-- The selection button  -->
         <button class="btn btn-outline-info" id="selection">
           <img src="assets/icons/selection-tool.svg" />
@@ -213,7 +228,11 @@
     <script src="./javascript/fill-bucket.js" type="text/javascript"></script>
     <!-- The selection functionality  -->
     <script src="./javascript/selection.js" type="text/javascript"></script>
-
+    <!-- The stroke width slider functionality  -->
+    <script
+      src="./javascript/stroke-width-slider.js"
+      type="text/javascript"
+    ></script>
     <!-- Color picker functionality -->
     <script type="text/javascript">
       const button = document.getElementById("my_picker");

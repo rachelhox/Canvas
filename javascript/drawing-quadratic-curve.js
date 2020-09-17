@@ -4,7 +4,7 @@ class DrawingQuadraticCurve extends PaintFunction {
     this.contextReal = contextReal;
     this.contextDraft = contextDraft;
     this.variable = 0;
-    this.contextReal.globalCompositeOperation = 'source-over';
+    this.contextReal.globalCompositeOperation = "source-over";
   }
 
   onMouseDown(coord, event) {
@@ -64,7 +64,7 @@ class DrawingQuadraticCurve extends PaintFunction {
       // 6. draw the real curve
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextReal.strokeStyle = curStroke;
-      this.contextReal.lineWidth = 5;
+      this.contextReal.lineWidth = strokeWidth;
       this.contextReal.beginPath();
       this.contextReal.moveTo(this.origX, this.origY);
       this.contextReal.quadraticCurveTo(
@@ -74,7 +74,7 @@ class DrawingQuadraticCurve extends PaintFunction {
         this.endY
       );
       this.contextReal.stroke();
-      savetosaveCard ();
+      savetosaveCard();
       this.variable = 0;
     }
   }
