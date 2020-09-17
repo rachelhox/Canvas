@@ -207,12 +207,11 @@ body {
   position: absolute;
   bottom: 45rem;
   left: 59rem;
-}
-
-#stroke-width {
   -webkit-appearance: none;
   background: none;
+  display: none;
 }
+
 #stroke-width::-webkit-slider-runnable-track {
   width: 300px;
   height: 8px;
