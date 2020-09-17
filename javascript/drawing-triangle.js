@@ -59,6 +59,7 @@ class DrawingTriangle extends PaintFunction {
     // for outline
     this.contextReal.closePath();
     this.contextReal.stroke();
+    savetosaveCard ();
   }
   onMouseLeave() {}
   onMouseEnter() {}

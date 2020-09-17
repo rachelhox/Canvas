@@ -73,11 +73,7 @@ $('#canvas-draft').mousemove(function (e) {
 });
 
 // it save and add step and save to saveCard
-
-$('#canvas-draft').mouseup(function (e) {
-    dragging = false;
-    let mouseX = e.offsetX;
-    let mouseY = e.offsetY;
+function savetosaveCard () {
     step++
     if (step < saveCard.length) { 
         saveCard.length = step;
@@ -85,6 +81,13 @@ $('#canvas-draft').mouseup(function (e) {
      }
     saveCard.push(canvasReal.toDataURL());
     console.log(`this saved to saveCard`);
+}
+
+$('#canvas-draft').mouseup(function (e) {
+    dragging = false;
+    let mouseX = e.offsetX;
+    let mouseY = e.offsetY;
+
     currentFunction.onMouseUp([mouseX, mouseY], e);
 });
 

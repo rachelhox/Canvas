@@ -18,7 +18,9 @@ class Eraser extends PaintFunction {
     }
   
     onMouseMove() {}
-    onMouseUp() {}
+    onMouseUp() {
+      savetosaveCard ();
+    }
     onMouseLeave() {}
     onMouseEnter() {}
   
@@ -27,5 +29,6 @@ class Eraser extends PaintFunction {
       this.context.lineTo(x, y);
       this.context.moveTo(x, y);
       this.context.stroke();
+    
     }
   }

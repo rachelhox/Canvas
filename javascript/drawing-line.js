@@ -23,7 +23,11 @@ class DrawingLine extends PaintFunction {
   }
 
   onMouseMove() {}
-  onMouseUp() {}
+
+  onMouseUp() {
+    savetosaveCard ();
+  }
+  
   onMouseLeave() {}
   onMouseEnter() {}
 

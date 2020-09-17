@@ -58,6 +58,7 @@ class DrawingCircle extends PaintFunction {
     this.contextReal.strokeStyle = curStroke;
     this.contextReal.lineWidth = 5;
     this.contextReal.stroke();
+    savetosaveCard ();
   }
 
   onMouseLeave() {}
