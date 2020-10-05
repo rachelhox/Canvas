@@ -8,6 +8,8 @@ canvas = new fabric.Canvas("canvas-draft");
 // var canvasUpper = document.getElementsByTagName("canvas")[1];
 // canvasUpper.width = 700;
 // canvasUpper.height = 500;
+// canvas.setHeight(700);
+// canvs.setWidth(500);
 
 // canvas.width = 700;
 // canvas.height = 500;
