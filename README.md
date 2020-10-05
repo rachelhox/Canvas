@@ -6,9 +6,8 @@ An online web application to emulate real-time drawing on a canvas.
 
 ## Libraries
 
+LOLLL opening a PR for Hacktober
+
 ## Authors
 
 - Yuen Yi Ho, Rachel
-- <!-- - your name -->
-- <!-- - your name -->
-- <!-- - your name -->
